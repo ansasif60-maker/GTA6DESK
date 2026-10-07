@@ -1,0 +1,24 @@
+{
+  "name": "gta6desk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GTA 6 Desk — Flagship Strategic Blueprint, Technical Architecture & Programmatic Yield Engine",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
+}

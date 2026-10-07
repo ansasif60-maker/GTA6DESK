@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*search=
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://gta6desk.com/sitemap.xml
+Host: https://gta6desk.com
