@@ -43,5 +43,5 @@ Unlike clickbait rumor mills or ad-choked wikis, GTA 6 Desk provides calm, autho
 ## Brand Commitments
 
 - **Tone:** Premium gaming and financial journal — authoritative, sleek, polished, and reader-first.
-- **Visual Character:** Sophisticated dark editorial magazine with subtle Vice City magenta and cyan accents, clean cards, and generous whitespace.
+- **Visual Character:** Sophisticated light editorial magazine with clean cards, generous whitespace, pristine Plus Jakarta Sans typography, and subtle Vice City rose and cyan accents.
 - **Integrity:** Independent journalistic publication not affiliated with Rockstar Games or Take-Two Interactive.
