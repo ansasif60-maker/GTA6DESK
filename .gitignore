@@ -10,6 +10,7 @@ build/
 dist/
 .open-next/
 .wrangler/
+legacy_static_html/
 
 # Logs
 npm-debug.log*

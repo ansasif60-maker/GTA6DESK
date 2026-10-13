@@ -70,6 +70,8 @@
   align-items: center;
   gap: 8px;
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-badge {
