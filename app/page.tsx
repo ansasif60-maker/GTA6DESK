@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Countdown from './components/Countdown';
+import TrailerTheater from './components/TrailerTheater';
 import { WEAPONS, CHARACTERS, MAP_ZONES, ARTICLES } from '@/lib/data';
 
 export default function HomePage() {
@@ -38,6 +39,9 @@ export default function HomePage() {
             <Countdown />
           </div>
         </section>
+
+        {/* Official Trailer 1 Theater & Interactive Breakdown */}
+        <TrailerTheater />
 
         {/* Weapons & Armory Highlight */}
         <section className="section-wrapper">
