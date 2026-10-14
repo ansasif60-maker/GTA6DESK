@@ -1,38 +1,183 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Countdown from './components/Countdown';
 import TrailerTheater from './components/TrailerTheater';
-import { WEAPONS, CHARACTERS, MAP_ZONES, ARTICLES } from '@/lib/data';
 
 export default function HomePage() {
-  const previewWeapons = WEAPONS.slice(0, 3);
-  const previewCharacters = CHARACTERS.slice(0, 2);
-  const previewArticles = ARTICLES.slice(0, 3);
+  const visualFeatures = [
+    {
+      title: 'State of Leonida',
+      subtitle: 'Vice City, Port Gellhorn & The Keys',
+      badge: 'THE WORLD',
+      badgeClass: 'news',
+      image: '/assets/leonida_map_hero.jpg',
+      link: '/map',
+      cta: 'Explore Map →'
+    },
+    {
+      title: 'Lucia & Jason',
+      subtitle: 'Vice City Dual Protagonists & Syndicate',
+      badge: 'CHARACTERS',
+      badgeClass: 'tech',
+      image: '/assets/lucia_character_portrait.jpg',
+      link: '/characters',
+      cta: 'View Dossiers →'
+    },
+    {
+      title: 'Exotics & Speedboats',
+      subtitle: 'Next-Gen Handling Physics & Fleet',
+      badge: 'VEHICLES',
+      badgeClass: 'lore',
+      image: '/assets/exotic_car_garage.jpg',
+      link: '/categories',
+      cta: 'Browse Fleet →'
+    },
+    {
+      title: 'Weapons & Ballistics',
+      subtitle: 'Tactical Loadouts & Trunk Stowage',
+      badge: 'ARMORY',
+      badgeClass: 'lore',
+      image: '/assets/tactical_armory_bench.jpg',
+      link: '/weapons',
+      cta: 'Inspect Arsenal →'
+    },
+    {
+      title: 'Grassrivers & Swamplands',
+      subtitle: 'Kelly County & Living Ecosystem AI',
+      badge: 'WILDLIFE',
+      badgeClass: 'news',
+      image: '/assets/wildlife_everglades_reserve.jpg',
+      link: '/leonida',
+      cta: 'Explore Wetlands →'
+    },
+    {
+      title: 'Campaign & Heists',
+      subtitle: 'Dual-Operative Coordinated Robberies',
+      badge: 'OPERATIONS',
+      badgeClass: 'financial',
+      image: '/assets/mission_convenience_heist.jpg',
+      link: '/missions',
+      cta: 'Mission Briefings →'
+    }
+  ];
+
+  const featuredDispatches = [
+    {
+      id: 1,
+      title: 'GTA 6 Official Release Window & Timeline Master Matrix',
+      tag: 'RELEASE WINDOW',
+      image: '/assets/social_media_vice_city.jpg'
+    },
+    {
+      id: 8,
+      title: "Lucia's Narrative Arc: From Inmate to Vice City Syndicate",
+      tag: 'CHARACTER LORE',
+      image: '/assets/mission_bank_vault.jpg'
+    },
+    {
+      id: 15,
+      title: 'Vice City Map Geography & 2.5x Scale Cartography',
+      tag: 'CARTOGRAPHY',
+      image: '/assets/radio_soundtrack_studio.jpg'
+    }
+  ];
 
   return (
     <>
       <Header />
 
-      <main style={{ minHeight: '80vh', paddingBottom: 'var(--space-3xl)' }}>
-        {/* Sleek Hero Header */}
-        <section style={{ padding: '48px 0 32px', background: 'radial-gradient(ellipse at 50% -20%, rgba(255, 0, 122, 0.18) 0%, rgba(0, 240, 255, 0.05) 50%, transparent 80%), var(--bg-base)' }}>
-          <div className="container">
-            <div style={{ maxWidth: '820px', marginBottom: '32px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                <span className="badge-category news">FALL 2025/2026 RELEASE</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-                  PlayStation 5 · Xbox Series X|S
-                </span>
-              </div>
-              <h1 style={{ fontSize: 'clamp(2.4rem, 4vw, 3.4rem)', fontWeight: 800, margin: '0 0 16px', lineHeight: 1.2 }}>
-                Grand Theft Auto VI Intelligence Journal
-              </h1>
-              <p style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', lineHeight: 1.65, margin: 0 }}>
-                Authoritative gaming journalism, verified Take-Two Interactive financial analysis, and comprehensive gameplay guides for Grand Theft Auto VI.
-              </p>
+      <main style={{ minHeight: '80vh', paddingBottom: 'var(--space-3xl)', background: 'var(--bg-base)' }}>
+        {/* Minimalist Rockstar-Style Hero */}
+        <section style={{
+          position: 'relative',
+          padding: '56px 0 36px',
+          background: 'radial-gradient(ellipse at 50% -20%, rgba(255, 0, 122, 0.22) 0%, rgba(0, 240, 255, 0.08) 45%, transparent 75%), var(--bg-base)',
+          borderBottom: '1px solid var(--border-subtle)',
+          textAlign: 'center'
+        }}>
+          <div className="container" style={{ maxWidth: '900px' }}>
+            {/* Rockstar Release Window & Platform Pill */}
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '12px',
+              background: 'rgba(255, 0, 122, 0.08)',
+              border: '1px solid rgba(255, 0, 122, 0.35)',
+              padding: '6px 16px',
+              borderRadius: '24px',
+              marginBottom: '18px'
+            }}>
+              <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--accent-rose)', letterSpacing: '0.08em' }}>
+                COMING FALL 2025
+              </span>
+              <span style={{ color: 'var(--border-default)', fontSize: '0.8rem' }}>|</span>
+              <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
+                PlayStation 5 · Xbox Series X|S
+              </span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 style={{
+              fontSize: 'clamp(2.4rem, 5vw, 4.2rem)',
+              fontWeight: 900,
+              lineHeight: 1.1,
+              letterSpacing: '-0.03em',
+              margin: '0 0 14px',
+              background: 'linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 60%, #94A3B8 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
+              GRAND THEFT AUTO VI
+            </h1>
+
+            <p style={{
+              fontSize: 'clamp(1rem, 1.8vw, 1.25rem)',
+              color: 'var(--accent-cyan)',
+              fontFamily: 'var(--font-mono)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              margin: '0 0 28px',
+              fontWeight: 700
+            }}>
+              Vice City &middot; State of Leonida
+            </p>
+
+            {/* Quick Hero Actions */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap', marginBottom: '36px' }}>
+              <a
+                href="#trailer-theater"
+                className="btn btn-primary"
+                style={{
+                  padding: '10px 24px',
+                  fontSize: '0.92rem',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontWeight: 800
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                <span>Watch Trailer 1</span>
+              </a>
+
+              <Link
+                href="/map"
+                className="btn btn-ghost"
+                style={{
+                  padding: '10px 20px',
+                  fontSize: '0.92rem',
+                  fontWeight: 700,
+                  borderColor: 'var(--border-default)'
+                }}
+              >
+                Explore Leonida Map →
+              </Link>
             </div>
 
             {/* Countdown Component */}
@@ -40,217 +185,266 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Official Trailer 1 Theater & Interactive Breakdown */}
+        {/* Clean, Clutter-Free Official Trailer */}
         <TrailerTheater />
 
-        {/* Weapons & Armory Highlight */}
-        <section className="section-wrapper">
+        {/* Visual Showcase Gallery ("More Pics, Less Text") */}
+        <section style={{ padding: '48px 0 32px' }}>
           <div className="container">
-            <div className="section-header-row">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
               <div>
-                <span className="badge-category lore">TACTICAL ARMORY</span>
-                <h2 className="section-title" style={{ marginTop: '6px' }}>Weapons & Ballistics</h2>
-                <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>
-                  Confirmed firearms, caliber data, and trunk inventory stowage mechanics.
-                </p>
+                <span className="badge-category news" style={{ fontSize: '0.72rem', letterSpacing: '0.06em' }}>
+                  THE WORLD OF GTA VI
+                </span>
+                <h2 style={{ fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 900, margin: '8px 0 0', color: 'var(--text-primary)' }}>
+                  Visual Showcase &amp; Intelligence
+                </h2>
               </div>
-              <Link href="/weapons" className="btn btn-ghost">
-                View Full Armory ({WEAPONS.length} Weapons) →
-              </Link>
+              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+                CONFIRMED ROCKSTAR GAMES ASSETS
+              </p>
             </div>
 
-            <div className="weapon-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
-              {previewWeapons.map((w) => (
-                <div key={w.id} className="weapon-card">
-                  <div className="weapon-image-wrap">
-                    <img src={w.image} alt={w.name} className="weapon-card-img" />
-                    <span className="weapon-class-badge">{w.category}</span>
-                    <span className="weapon-real-model-tag">{w.caliber}</span>
-                  </div>
-                  <div className="weapon-card-body">
-                    <h3 className="weapon-title" style={{ fontSize: '1.25rem' }}>{w.name}</h3>
-                    <span className="weapon-caliber-sub">{w.realWorldCounterpart}</span>
-                    <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>
-                      {w.lore}
-                    </p>
-                    <div className="weapon-stat-bars">
-                      <div className="weapon-stat-row">
-                        <span className="weapon-stat-name">Damage</span>
-                        <div className="weapon-stat-track">
-                          <div className="weapon-stat-fill" style={{ width: `${w.damage}%`, background: 'var(--accent-rose)' }} />
-                        </div>
-                        <span className="weapon-stat-val">{w.damage}</span>
-                      </div>
-                      <div className="weapon-stat-row">
-                        <span className="weapon-stat-name">Accuracy</span>
-                        <div className="weapon-stat-track">
-                          <div className="weapon-stat-fill" style={{ width: `${w.accuracy}%`, background: 'var(--accent-cyan)' }} />
-                        </div>
-                        <span className="weapon-stat-val">{w.accuracy}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+            {/* Visual Image Cards Grid */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: '24px'
+            }}>
+              {visualFeatures.map((feat) => (
+                <Link
+                  key={feat.title}
+                  href={feat.link}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  <div
+                    style={{
+                      position: 'relative',
+                      borderRadius: 'var(--radius-lg)',
+                      overflow: 'hidden',
+                      background: 'var(--bg-surface)',
+                      border: '1px solid var(--border-subtle)',
+                      aspectRatio: '16 / 10',
+                      boxShadow: 'var(--shadow-sm)',
+                      transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-4px)';
+                      e.currentTarget.style.borderColor = 'rgba(0, 240, 255, 0.45)';
+                      e.currentTarget.style.boxShadow = '0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.15)';
+                      const img = e.currentTarget.querySelector('img');
+                      if (img) img.style.transform = 'scale(1.06)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                      e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
+                      const img = e.currentTarget.querySelector('img');
+                      if (img) img.style.transform = 'scale(1)';
+                    }}
+                  >
+                    {/* Background Visual Asset */}
+                    <img
+                      src={feat.image}
+                      alt={feat.title}
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        transition: 'transform 0.5s ease'
+                      }}
+                    />
 
-        {/* Characters Highlight */}
-        <section className="section-wrapper" style={{ background: 'var(--bg-surface)' }}>
-          <div className="container">
-            <div className="section-header-row">
-              <div>
-                <span className="badge-category tech">LEONIDA UNDERWORLD</span>
-                <h2 className="section-title" style={{ marginTop: '6px' }}>Characters & Cast</h2>
-                <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>
-                  Protagonist profiles, actor investigations, and syndicate connections.
-                </p>
-              </div>
-              <Link href="/characters" className="btn btn-ghost">
-                View Full Cast ({CHARACTERS.length} Dossiers) →
-              </Link>
-            </div>
+                    {/* Gradient Overlay for Instant Readability */}
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(to top, rgba(3, 5, 8, 0.95) 0%, rgba(3, 5, 8, 0.55) 50%, rgba(3, 5, 8, 0.1) 100%)'
+                    }} />
 
-            <div className="character-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))' }}>
-              {previewCharacters.map((c) => (
-                <div key={c.id} className="character-card">
-                  <div className="character-portrait-box">
-                    <img src={c.image} alt={c.name} className="character-portrait-img" />
-                    <span className="character-status-badge">{c.status}</span>
-                    <span className="character-role-tag">{c.role}</span>
-                  </div>
-                  <div className="character-card-body">
-                    <div className="character-name-row">
-                      <h3 className="character-name" style={{ fontSize: '1.45rem' }}>{c.name}</h3>
-                      <span className="character-actor">{c.actor}</span>
-                    </div>
-                    <div className="character-faction-row">{c.faction}</div>
-                    <p className="character-bio-text">{c.bio}</p>
-                    <div className="character-traits-wrap">
-                      {c.traits.map((t, idx) => (
-                        <span key={idx} className="character-trait-badge">{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Map & World Highlight */}
-        <section className="section-wrapper">
-          <div className="container">
-            <div className="section-header-row">
-              <div>
-                <span className="badge-category financial">WORLD CARTOGRAPHY</span>
-                <h2 className="section-title" style={{ marginTop: '6px' }}>State of Leonida</h2>
-                <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>
-                  Comprehensive geographic mapping modeled at ~2.5x the scale of GTA V Los Santos.
-                </p>
-              </div>
-              <Link href="/map" className="btn btn-ghost">
-                Explore Full Interactive Map →
-              </Link>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
-              {MAP_ZONES.slice(0, 4).map((zone) => (
-                <div key={zone.id} className="spotlight-item" style={{ background: 'var(--bg-surface)', padding: '20px' }}>
-                  <span className="badge-category lore" style={{ fontSize: '0.7rem' }}>{zone.district}</span>
-                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, margin: '8px 0 6px', color: 'var(--text-primary)' }}>
-                    {zone.name}
-                  </h3>
-                  <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.55, margin: 0 }}>
-                    {zone.lore}
-                  </p>
-                  <div style={{ marginTop: '12px', fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-                    Interiors: {zone.enterableStructures}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Financial & Corporate Desk */}
-        <section className="section-wrapper" style={{ background: 'var(--bg-surface)' }}>
-          <div className="container">
-            <div className="section-header-row">
-              <div>
-                <span className="badge-category financial">WALL STREET & SEC FILINGS</span>
-                <h2 className="section-title" style={{ marginTop: '6px' }}>Take-Two Interactive (NASDAQ: TTWO)</h2>
-                <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>
-                  Institutional guidance analysis, Net Bookings forecasts, and SEC Edgar disclosures.
-                </p>
-              </div>
-              <Link href="/financial" className="btn btn-ghost">
-                Open Financial Desk →
-              </Link>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
-              <div className="trailer-stat-card">
-                <div className="stat-label-mono">FY2026 NET BOOKINGS TARGET</div>
-                <div className="stat-value-prominent" style={{ color: 'var(--accent-cyan)' }}>$8.0B+ Target</div>
-                <div className="stat-desc">Maintained in official SEC Form 8-K filings for calendar 2025/2026 launch window.</div>
-              </div>
-
-              <div className="trailer-stat-card">
-                <div className="stat-label-mono">FIRST-YEAR UNITS FORECAST</div>
-                <div className="stat-value-prominent" style={{ color: 'var(--accent-rose)' }}>38M - 42M Units</div>
-                <div className="stat-desc">Wall Street analyst consensus modeling for PlayStation 5 and Xbox Series X|S.</div>
-              </div>
-
-              <div className="trailer-stat-card">
-                <div className="stat-label-mono">TRAILER 1 ENGAGEMENT</div>
-                <div className="stat-value-prominent" style={{ color: 'var(--accent-green)' }}>93M+ Views (24h)</div>
-                <div className="stat-desc">Guinness World Record for most-viewed video game reveal in internet history.</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Verified Articles */}
-        <section className="section-wrapper">
-          <div className="container">
-            <div className="section-header-row">
-              <div>
-                <span className="badge-category news">EDITORIAL DESK</span>
-                <h2 className="section-title" style={{ marginTop: '6px' }}>Verified Reporting & Analysis</h2>
-                <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>
-                  Fact-checked journalism separating confirmed disclosures from rumors.
-                </p>
-              </div>
-              <Link href="/news" className="btn btn-ghost">
-                Read All Articles ({ARTICLES.length}) →
-              </Link>
-            </div>
-
-            <div className="story-grid-three">
-              {previewArticles.map((art) => (
-                <div key={art.id} className="story-card" style={{ overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
-                  <div className="story-card-body" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                    <div style={{ minHeight: '26px', marginBottom: '8px' }}>
-                      <span className="badge-category lore" style={{ fontSize: '0.7rem', width: 'fit-content' }}>
-                        {art.clusterName}
+                    {/* Top Badge */}
+                    <div style={{ position: 'absolute', top: '16px', left: '18px' }}>
+                      <span className={`badge-category ${feat.badgeClass}`} style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.04em' }}>
+                        {feat.badge}
                       </span>
                     </div>
-                    <h3 className="story-title" style={{ height: '3.2rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                      <Link href={`/news/${art.id}`} target="_blank" rel="noopener noreferrer" title={art.title}>{art.title}</Link>
-                    </h3>
-                    <p className="story-excerpt" style={{ height: '4.6rem', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis', marginBottom: '16px' }}>
-                      {art.leadParagraph}
-                    </p>
-                    <div style={{ marginTop: 'auto', paddingTop: '12px', borderTop: '1px solid var(--border-subtle)' }}>
-                      <Link href={`/news/${art.id}`} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: '6px 14px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--accent-cyan)', borderColor: 'rgba(0, 240, 255, 0.35)', background: 'rgba(0, 240, 255, 0.06)', display: 'inline-flex' }}>
-                        Read Analysis →
-                      </Link>
+
+                    {/* Bottom Content (Punchy & Minimalist) */}
+                    <div style={{ position: 'absolute', bottom: '18px', left: '18px', right: '18px' }}>
+                      <h3 style={{
+                        fontSize: '1.3rem',
+                        fontWeight: 900,
+                        color: 'var(--text-primary)',
+                        margin: '0 0 4px',
+                        lineHeight: 1.25
+                      }}>
+                        {feat.title}
+                      </h3>
+                      <p style={{
+                        fontSize: '0.84rem',
+                        color: 'var(--text-secondary)',
+                        margin: '0 0 10px',
+                        lineHeight: 1.4
+                      }}>
+                        {feat.subtitle}
+                      </p>
+                      <span style={{
+                        fontSize: '0.78rem',
+                        fontWeight: 700,
+                        color: 'var(--accent-cyan)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px'
+                      }}>
+                        {feat.cta}
+                      </span>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Minimalist Featured Intelligence (Image-Backed Cards) */}
+        <section style={{ padding: '36px 0 24px' }}>
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
+              <div>
+                <span className="badge-category news" style={{ fontSize: '0.72rem' }}>EDITORIAL INTEL</span>
+                <h2 style={{ fontSize: '1.6rem', fontWeight: 900, margin: '6px 0 0', color: 'var(--text-primary)' }}>
+                  Featured Verified Dispatches
+                </h2>
+              </div>
+
+              <Link href="/news" className="btn btn-ghost" style={{ fontSize: '0.85rem' }}>
+                All 40 Dossiers →
+              </Link>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+              {featuredDispatches.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/news/${item.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  <div
+                    style={{
+                      background: 'var(--bg-surface)',
+                      border: '1px solid var(--border-subtle)',
+                      borderRadius: 'var(--radius-lg)',
+                      overflow: 'hidden',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      height: '100%',
+                      transition: 'border-color 0.2s ease, transform 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--accent-rose)';
+                      e.currentTarget.style.transform = 'translateY(-3px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    <div style={{ height: '160px', position: 'relative', overflow: 'hidden' }}>
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      />
+                      <span style={{
+                        position: 'absolute',
+                        top: '12px',
+                        left: '12px',
+                        background: 'rgba(3, 5, 8, 0.75)',
+                        backdropFilter: 'blur(4px)',
+                        padding: '3px 8px',
+                        borderRadius: '4px',
+                        fontSize: '0.68rem',
+                        fontWeight: 700,
+                        color: 'var(--accent-cyan)',
+                        fontFamily: 'var(--font-mono)'
+                      }}>
+                        NODE #{item.id} · {item.tag}
+                      </span>
+                    </div>
+
+                    <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'space-between' }}>
+                      <h3 style={{
+                        fontSize: '1.05rem',
+                        fontWeight: 800,
+                        color: 'var(--text-primary)',
+                        lineHeight: 1.35,
+                        margin: '0 0 14px'
+                      }}>
+                        {item.title}
+                      </h3>
+
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        paddingTop: '12px',
+                        borderTop: '1px solid var(--border-subtle)'
+                      }}>
+                        <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+                          READ IN NEW TAB ↗
+                        </span>
+                        <span style={{
+                          fontSize: '0.8rem',
+                          fontWeight: 700,
+                          color: 'var(--accent-cyan)'
+                        }}>
+                          Read Analysis →
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Clean Minimalist Hub Links */}
+        <section style={{ padding: '24px 0 16px' }}>
+          <div className="container">
+            <div style={{
+              background: 'var(--bg-surface)',
+              border: '1px solid var(--border-subtle)',
+              borderRadius: 'var(--radius-lg)',
+              padding: '24px',
+              display: 'flex',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '16px'
+            }}>
+              <Link href="/map" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--accent-cyan)' }}>🗺️</span> Leonida Map
+              </Link>
+              <Link href="/characters" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--accent-rose)' }}>👥</span> Characters
+              </Link>
+              <Link href="/weapons" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--accent-amber)' }}>🔫</span> Weapons
+              </Link>
+              <Link href="/missions" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--accent-green)' }}>🎯</span> Missions
+              </Link>
+              <Link href="/financial" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--accent-cyan)' }}>📊</span> Financial Desk
+              </Link>
+              <Link href="/news" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--accent-rose)' }}>📰</span> Newsroom
+              </Link>
             </div>
           </div>
         </section>
