@@ -6,44 +6,30 @@ export default function Header() {
     <header className="site-header">
       <div className="container nav-inner">
         <div className="brand-wrapper">
-          <Link href="/" className="brand-logo" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+          <Link
+            href="/"
+            className="brand-logo"
+            aria-label="GTA 6 DESK Home"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+              transition: 'transform 0.2s ease, filter 0.2s ease'
+            }}
+          >
             <img
               src="/assets/gta6desk_logo.png"
-              alt="GTA 6 DESK Logo"
-              width={38}
-              height={38}
+              alt="GTA 6 DESK"
+              width={42}
+              height={42}
               style={{
-                borderRadius: '8px',
+                borderRadius: '9px',
                 border: '1px solid rgba(0, 240, 255, 0.45)',
-                boxShadow: '0 0 12px rgba(0, 240, 255, 0.35)',
+                boxShadow: '0 0 14px rgba(0, 240, 255, 0.35)',
                 display: 'block',
                 objectFit: 'cover'
               }}
             />
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <span style={{
-                  fontSize: '1.15rem',
-                  fontWeight: 900,
-                  letterSpacing: '0.04em',
-                  background: 'var(--gradient-vi)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}>
-                  GTA 6 DESK
-                </span>
-                <span className="brand-badge">JOURNAL</span>
-              </div>
-              <span style={{
-                fontSize: '0.62rem',
-                color: 'var(--text-muted)',
-                fontFamily: 'var(--font-mono)',
-                letterSpacing: '0.06em',
-                fontWeight: 600
-              }}>
-                INTELLIGENCE NETWORK
-              </span>
-            </div>
           </Link>
         </div>
 
