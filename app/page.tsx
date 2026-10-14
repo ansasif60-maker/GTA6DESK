@@ -112,7 +112,7 @@ export default function HomePage() {
               marginBottom: '18px'
             }}>
               <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--accent-rose)', letterSpacing: '0.08em' }}>
-                COMING FALL 2025
+                NOVEMBER 19, 2026 · FALL 2026
               </span>
               <span style={{ color: 'var(--border-default)', fontSize: '0.8rem' }}>|</span>
               <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 600 }}>

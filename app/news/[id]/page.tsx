@@ -74,7 +74,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     description: article.leadParagraph,
     image: ['https://gta6desk.com/assets/gta6desk_logo.png'],
     datePublished: '2024-12-05T09:00:00Z',
-    dateModified: '2025-01-15T12:00:00Z',
+    dateModified: '2026-10-14T12:00:00Z',
     author: {
       '@type': 'Organization',
       name: 'GTA 6 DESK Intelligence Staff',

@@ -72,7 +72,7 @@ export default function FinancialPage() {
 
                     <div style={{ background: 'var(--bg-elevated)', padding: '16px', borderRadius: 'var(--radius-sm)' }}>
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>RELEASE HORIZON</div>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent-rose)', marginTop: '4px' }}>Fall 2025 (FY26)</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent-rose)', marginTop: '4px' }}>November 19, 2026</div>
                     </div>
 
                     <div style={{ background: 'var(--bg-elevated)', padding: '16px', borderRadius: 'var(--radius-sm)' }}>

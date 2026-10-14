@@ -11,18 +11,15 @@ export default function Countdown() {
   });
   const [isTrailerModalOpen, setIsTrailerModalOpen] = useState(false);
 
-  const [isWindowActive, setIsWindowActive] = useState(false);
-
   useEffect(() => {
-    // Official Take-Two Interactive & Rockstar Games Confirmed Window: Fall 2025
-    const targetDate = new Date('2025-10-01T00:00:00Z').getTime();
+    // Official GTA VI Release Date: November 19, 2026 (Fall 2026)
+    const targetDate = new Date('2026-11-19T00:00:00Z').getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
       const difference = targetDate - now;
 
       if (difference > 0) {
-        setIsWindowActive(false);
         const d = Math.floor(difference / (1000 * 60 * 60 * 24));
         const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
@@ -35,7 +32,12 @@ export default function Countdown() {
           seconds: String(s).padStart(2, '0'),
         });
       } else {
-        setIsWindowActive(true);
+        setTimeLeft({
+          days: '000',
+          hours: '00',
+          minutes: '00',
+          seconds: '00',
+        });
       }
     };
 
@@ -94,7 +96,7 @@ export default function Countdown() {
                 <line x1="8" y1="2" x2="8" y2="6" />
                 <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
-              <span>CONFIRMED WINDOW</span>
+              <span>TARGET: NOVEMBER 19, 2026</span>
             </div>
             <h2 style={{ fontSize: '1.35rem', fontWeight: 800, margin: '8px 0 0', color: 'var(--text-primary)' }}>
               Grand Theft Auto VI Release Countdown
@@ -107,26 +109,26 @@ export default function Countdown() {
 
         <div className="countdown-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
           <div className="countdown-digit-box">
-            <span className="digit-val">{isWindowActive ? 'FALL' : timeLeft.days}</span>
-            <span className="digit-label">{isWindowActive ? 'TARGET' : 'DAYS'}</span>
+            <span className="digit-val">{timeLeft.days}</span>
+            <span className="digit-label">DAYS</span>
           </div>
           <div className="countdown-digit-box">
-            <span className="digit-val">{isWindowActive ? '2025' : timeLeft.hours}</span>
-            <span className="digit-label">{isWindowActive ? 'SEASON' : 'HOURS'}</span>
+            <span className="digit-val">{timeLeft.hours}</span>
+            <span className="digit-label">HOURS</span>
           </div>
           <div className="countdown-digit-box">
-            <span className="digit-val">{isWindowActive ? 'PS5' : timeLeft.minutes}</span>
-            <span className="digit-label">{isWindowActive ? 'CONSOLE' : 'MINUTES'}</span>
+            <span className="digit-val">{timeLeft.minutes}</span>
+            <span className="digit-label">MINUTES</span>
           </div>
           <div className="countdown-digit-box">
-            <span className="digit-val">{isWindowActive ? 'XSX' : timeLeft.seconds}</span>
-            <span className="digit-label">{isWindowActive ? 'CONSOLE' : 'SECONDS'}</span>
+            <span className="digit-val">{timeLeft.seconds}</span>
+            <span className="digit-label">SECONDS</span>
           </div>
         </div>
 
         <div className="countdown-footer">
           <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-            Confirmed launch window: <strong>Fall 2025</strong> for PlayStation 5 and Xbox Series X|S per official Take-Two Interactive SEC Form 10-Q filings.
+            Official release date target: <strong>November 19, 2026</strong> (Fall 2026) for PlayStation 5 and Xbox Series X|S.
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <button
