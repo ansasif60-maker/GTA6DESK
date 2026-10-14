@@ -5,8 +5,16 @@ import Footer from '../components/Footer';
 import { CATEGORIES } from '@/lib/data';
 
 export const metadata = {
-  title: 'Content Categories & Topic Hubs — GTA 6 DESK',
-  description: 'Explore the complete directory of Grand Theft Auto VI coverage hubs, weapons, characters, map zones, and financial filings.',
+  title: 'GTA 6 Coverage Directory & Topic Hubs | GTA 6 DESK',
+  description: 'Explore the complete directory of Grand Theft Auto VI coverage hubs, tactical weapons, character profiles, Leonida map zones, and Take-Two financial filings.',
+  alternates: {
+    canonical: 'https://gta6desk.com/categories',
+  },
+  openGraph: {
+    title: 'GTA 6 Topic Directory & Hubs — GTA 6 DESK',
+    description: 'Explore all Grand Theft Auto VI coverage hubs, databases, and analysis desks.',
+    url: 'https://gta6desk.com/categories',
+  },
 };
 
 export default function CategoriesPage() {

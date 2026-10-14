@@ -4,8 +4,16 @@ import Footer from '../components/Footer';
 import { MISSIONS } from '@/lib/data';
 
 export const metadata = {
-  title: 'Missions & Story Walkthroughs — GTA 6 DESK',
+  title: 'GTA 6 Missions & Heist Walkthroughs | Story Campaign | GTA 6 DESK',
   description: 'Chronological mission guide, heist payouts, gold medal requirements, and tactical execution guides for Grand Theft Auto VI.',
+  alternates: {
+    canonical: 'https://gta6desk.com/missions',
+  },
+  openGraph: {
+    title: 'GTA 6 Missions & Heists Guide — GTA 6 DESK',
+    description: 'Campaign missions, dual-protagonist mechanics, and tactical heist briefings in GTA 6.',
+    url: 'https://gta6desk.com/missions',
+  },
 };
 
 export default function MissionsPage() {

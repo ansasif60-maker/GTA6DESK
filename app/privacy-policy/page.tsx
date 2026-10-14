@@ -3,8 +3,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Privacy Policy — GTA 6 DESK',
-  description: 'Privacy Policy and data governance compliance for GTA 6 DESK readers and subscribers.',
+  title: 'Privacy Policy — GTA 6 DESK Data Governance',
+  description: 'Privacy policy, cookies usage, and data governance compliance for GTA 6 DESK readers and subscribers.',
+  alternates: {
+    canonical: 'https://gta6desk.com/privacy-policy',
+  },
+  openGraph: {
+    title: 'Privacy Policy — GTA 6 DESK',
+    description: 'Privacy policy, cookies usage, and data governance compliance for GTA 6 DESK readers and subscribers.',
+    url: 'https://gta6desk.com/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {

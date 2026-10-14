@@ -3,8 +3,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'About GTA 6 DESK — Editorial Mission & Standards',
-  description: 'The editorial ethos, methodology, and investigative standards behind GTA 6 DESK.',
+  title: 'About GTA 6 DESK — Editorial Mission, Standards & Methodology',
+  description: 'The editorial ethos, verification standards, and investigative methodology behind GTA 6 DESK.',
+  alternates: {
+    canonical: 'https://gta6desk.com/about',
+  },
+  openGraph: {
+    title: 'About GTA 6 DESK — Editorial Mission & Standards',
+    description: 'The editorial ethos, verification standards, and investigative methodology behind GTA 6 DESK.',
+    url: 'https://gta6desk.com/about',
+  },
 };
 
 export default function AboutPage() {

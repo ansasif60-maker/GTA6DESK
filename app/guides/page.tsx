@@ -3,8 +3,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Gameplay Guides & Strategies — GTA 6 DESK',
-  description: 'Tactical gameplay guides, robbery mechanics, police evasion strategies, and duffel bag cash management in GTA VI.',
+  title: 'GTA 6 Gameplay Guides & Tactical Strategies | GTA 6 DESK',
+  description: 'Tactical gameplay guides, trunk inventory stowage, police pursuit evasion, and heist coordination strategies in Grand Theft Auto VI.',
+  alternates: {
+    canonical: 'https://gta6desk.com/guides',
+  },
+  openGraph: {
+    title: 'GTA 6 Gameplay Guides & Strategies — GTA 6 DESK',
+    description: 'Tactical guides for Grand Theft Auto VI: inventory management, evasion tactics, and heists.',
+    url: 'https://gta6desk.com/guides',
+  },
 };
 
 export default function GuidesPage() {

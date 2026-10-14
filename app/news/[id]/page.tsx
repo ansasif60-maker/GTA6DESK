@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${article.title} | GTA 6 DESK Verified Analysis`,
     description: article.leadParagraph,
+    alternates: {
+      canonical: `https://gta6desk.com/news/${article.id}`,
+    },
     openGraph: {
       title: `${article.title} — GTA 6 DESK Intelligence`,
       description: article.leadParagraph,
@@ -64,8 +67,68 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     (a) => a.cluster === article.cluster && a.id !== article.id
   ).slice(0, 3);
 
+  const jsonLdArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: article.title,
+    description: article.leadParagraph,
+    image: ['https://gta6desk.com/assets/gta6desk_logo.png'],
+    datePublished: '2024-12-05T09:00:00Z',
+    dateModified: '2025-01-15T12:00:00Z',
+    author: {
+      '@type': 'Organization',
+      name: 'GTA 6 DESK Intelligence Staff',
+      url: 'https://gta6desk.com/about'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'GTA 6 Desk',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://gta6desk.com/assets/gta6desk_logo.png'
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://gta6desk.com/news/${article.id}`
+    }
+  };
+
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://gta6desk.com'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'News Desk',
+        item: 'https://gta6desk.com/news'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: article.title,
+        item: `https://gta6desk.com/news/${article.id}`
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
       <Header />
 
       <main style={{ minHeight: '85vh', paddingBottom: '80px', background: 'var(--bg-base)' }}>

@@ -4,8 +4,16 @@ import Footer from '../components/Footer';
 import RoiCalculator from '../components/RoiCalculator';
 
 export const metadata = {
-  title: 'GTA VI First-Year Revenue ROI Calculator — GTA 6 DESK',
-  description: 'Interactive commercial revenue simulator and operating profit forecast engine for Grand Theft Auto VI.',
+  title: 'GTA 6 First-Year Revenue ROI Calculator & Financial Model | GTA 6 DESK',
+  description: 'Interactive commercial revenue simulator and operating profit forecast engine for Grand Theft Auto VI based on Take-Two guidance.',
+  alternates: {
+    canonical: 'https://gta6desk.com/roi-calculator',
+  },
+  openGraph: {
+    title: 'GTA 6 First-Year Revenue ROI Calculator — GTA 6 DESK',
+    description: 'Interactive financial modeling simulator for GTA 6 unit sales and gross margin yield.',
+    url: 'https://gta6desk.com/roi-calculator',
+  },
 };
 
 export default function RoiCalculatorPage() {

@@ -6,10 +6,10 @@ import '../css/components.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://gta6desk.com'),
   title: {
-    default: 'GTA 6 Desk — Flagship Intelligence Terminal & Programmatic Yield Engine',
-    template: '%s | GTA 6 Desk'
+    default: 'GTA 6 DESK — Grand Theft Auto VI News, Weapons, Map & Intelligence',
+    template: '%s | GTA 6 DESK'
   },
-  description: 'Authoritative Grand Theft Auto VI intelligence terminal featuring real-time Take-Two (TTWO) financial analytics, First-Year Revenue ROI Calculator, interactive Leonida cartography, relational weapons & vehicle databases, and 40-article semantic knowledge graph.',
+  description: 'Authoritative Grand Theft Auto VI database and intelligence journal: verified Rockstar Games news, weapons ballistics, character dossiers, interactive Leonida map, and Take-Two financial analysis.',
   alternates: {
     canonical: 'https://gta6desk.com/',
   },
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: 'GTA 6 Desk — Flagship Intelligence Terminal',
-    description: 'The Business, Strategy & Game Intelligence Journal for Grand Theft Auto VI and Take-Two Interactive (NASDAQ: TTWO).',
+    title: 'GTA 6 DESK — Grand Theft Auto VI Intelligence Journal',
+    description: 'Fact-checked Rockstar Games news, weapons ballistics, character profiles, interactive map, and Take-Two Interactive financial telemetry.',
     url: 'https://gta6desk.com',
-    siteName: 'GTA 6 Desk',
+    siteName: 'GTA 6 DESK',
     images: [
       {
         url: '/assets/gta6desk_logo.png',

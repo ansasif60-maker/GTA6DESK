@@ -3,8 +3,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Terms of Service — GTA 6 DESK',
-  description: 'Terms and conditions governing access to GTA 6 DESK intelligence publications.',
+  title: 'Terms of Service — GTA 6 DESK Access Guidelines',
+  description: 'Terms and conditions governing access to GTA 6 DESK intelligence publications and educational tools.',
+  alternates: {
+    canonical: 'https://gta6desk.com/terms-of-service',
+  },
+  openGraph: {
+    title: 'Terms of Service — GTA 6 DESK',
+    description: 'Terms and conditions governing access to GTA 6 DESK intelligence publications and educational tools.',
+    url: 'https://gta6desk.com/terms-of-service',
+  },
 };
 
 export default function TermsOfServicePage() {

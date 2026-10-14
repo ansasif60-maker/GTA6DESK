@@ -4,8 +4,16 @@ import Footer from '../components/Footer';
 import RoiCalculator from '../components/RoiCalculator';
 
 export const metadata = {
-  title: 'Take-Two Interactive (TTWO) Financial & SEC Intelligence — GTA 6 DESK',
-  description: 'Wall Street analysis, SEC Form 10-K/10-Q filing breakdowns, FY26-FY27 Net Bookings guidance, and GTA VI First-Year revenue projections.',
+  title: 'Take-Two (TTWO) GTA 6 Financial Intelligence & SEC Filings | GTA 6 DESK',
+  description: 'Wall Street analysis, SEC Form 10-K/10-Q filing breakdowns, FY26 Net Bookings guidance, and GTA VI First-Year revenue projections.',
+  alternates: {
+    canonical: 'https://gta6desk.com/financial',
+  },
+  openGraph: {
+    title: 'Take-Two Interactive (TTWO) GTA 6 Guidance & SEC Filings — GTA 6 DESK',
+    description: 'Wall Street analysis, SEC Form 10-K/10-Q filing breakdowns, and GTA VI Net Bookings targets.',
+    url: 'https://gta6desk.com/financial',
+  },
 };
 
 export default function FinancialPage() {
@@ -64,7 +72,7 @@ export default function FinancialPage() {
 
                     <div style={{ background: 'var(--bg-elevated)', padding: '16px', borderRadius: 'var(--radius-sm)' }}>
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>RELEASE HORIZON</div>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent-rose)', marginTop: '4px' }}>Fall 2025 / 2026</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent-rose)', marginTop: '4px' }}>Fall 2025 (FY26)</div>
                     </div>
 
                     <div style={{ background: 'var(--bg-elevated)', padding: '16px', borderRadius: 'var(--radius-sm)' }}>

@@ -4,7 +4,15 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Legal Disclaimer & Trademark Notices — GTA 6 DESK',
-  description: 'Legal disclaimer, trademark disclosures, and financial non-solicitation notices.',
+  description: 'Legal disclaimer, trademark disclosures, fair use policies, and financial non-solicitation notices.',
+  alternates: {
+    canonical: 'https://gta6desk.com/disclaimer',
+  },
+  openGraph: {
+    title: 'Legal Disclaimer & Trademark Notices — GTA 6 DESK',
+    description: 'Legal disclaimer, trademark disclosures, fair use policies, and financial non-solicitation notices.',
+    url: 'https://gta6desk.com/disclaimer',
+  },
 };
 
 export default function DisclaimerPage() {

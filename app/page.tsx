@@ -140,10 +140,21 @@ export default function HomePage() {
               fontFamily: 'var(--font-mono)',
               textTransform: 'uppercase',
               letterSpacing: '0.12em',
-              margin: '0 0 28px',
+              margin: '0 0 12px',
               fontWeight: 700
             }}>
               Vice City &middot; State of Leonida
+            </p>
+
+            <p style={{
+              fontSize: '1rem',
+              color: 'var(--text-secondary)',
+              lineHeight: 1.6,
+              maxWidth: '680px',
+              margin: '0 auto 28px',
+              fontWeight: 500
+            }}>
+              The premier independent reference journal and database for Grand Theft Auto VI—fact-checked news, verified weapons ballistics, character profiles, interactive Leonida cartography, and Take-Two Interactive financial telemetry.
             </p>
 
             {/* Quick Hero Actions */}

@@ -56,7 +56,8 @@ export default function Footer() {
               <li><Link href="/weapons">Weapons & Armory</Link></li>
               <li><Link href="/characters">Characters & Cast</Link></li>
               <li><Link href="/missions">Missions & Heists</Link></li>
-              <li><Link href="/map">Leonida Map</Link></li>
+              <li><Link href="/map">Interactive Map</Link></li>
+              <li><Link href="/leonida">State of Leonida</Link></li>
             </ul>
           </div>
 
@@ -66,6 +67,8 @@ export default function Footer() {
               <li><Link href="/financial">Financial & SEC Filings</Link></li>
               <li><Link href="/news">Verified Newsroom</Link></li>
               <li><Link href="/database">Relational Databases</Link></li>
+              <li><Link href="/guides">Strategy Guides</Link></li>
+              <li><Link href="/categories">Topic Directory</Link></li>
               <li><Link href="/roi-calculator">ROI Calculator</Link></li>
             </ul>
           </div>
@@ -76,7 +79,8 @@ export default function Footer() {
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/contact">Contact Desk</Link></li>
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/disclaimer">Disclaimer</Link></li>
+              <li><Link href="/terms-of-service">Terms of Service</Link></li>
+              <li><Link href="/disclaimer">Legal Disclaimer</Link></li>
             </ul>
           </div>
         </div>
