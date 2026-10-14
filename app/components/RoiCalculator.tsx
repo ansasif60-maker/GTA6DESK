@@ -14,7 +14,7 @@ export default function RoiCalculator() {
   const estimatedProfit = (grossRevenue * (takeTwoMargin / 100)) + (liveServiceRevenue * 0.70);
 
   return (
-    <div style={{ padding: '28px', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', backgroundColor: '#FFFFFF', boxShadow: 'var(--shadow-sm)' }}>
+    <div style={{ padding: '28px', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', backgroundColor: 'var(--bg-surface)', boxShadow: 'var(--shadow-sm)' }}>
       <div style={{ marginBottom: '20px' }}>
         <span className="badge-category financial" style={{ fontSize: '0.75rem' }}>INTERACTIVE MODEL</span>
         <h3 style={{ margin: '6px 0 0', fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-primary)' }}>

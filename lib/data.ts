@@ -81,6 +81,38 @@ export interface Article {
 
 export const WEAPONS: Weapon[] = [
   {
+    id: "wep_girardi_es9",
+    name: "Girardi ES9 Semi-Automatic",
+    realWorldCounterpart: "SIG Sauer P320 / Beretta 92FS Hybrid",
+    category: "Sidearms",
+    image: "/assets/weapon_combat_pistol.jpg",
+    caliber: "9x19mm Parabellum",
+    fireRate: "Semi-Auto (460 RPM)",
+    damage: 68,
+    accuracy: 86,
+    range: 55,
+    handling: 90,
+    inventoryMode: "Concealed Holster (Fast Draw)",
+    penetration: { drywall: "6 cm", sheetMetal: "1.5 mm", glass: "Deflected / 2-Shot Shatter" },
+    lore: "Jason's primary sidearm. Designed with high-tensile alloy ergonomics, crisp trigger reset, and modular rail for reflex sights and suppressors."
+  },
+  {
+    id: "wep_klose_k17",
+    name: "Klose K17 Striker-Fired 9mm",
+    realWorldCounterpart: "Glock 17/19 Gen 5 / HK VP9",
+    category: "Sidearms",
+    image: "/assets/weapon_combat_pistol.jpg",
+    caliber: "9x19mm Parabellum",
+    fireRate: "Semi-Auto (420 RPM)",
+    damage: 65,
+    accuracy: 84,
+    range: 52,
+    handling: 94,
+    inventoryMode: "Concealed Holster / Handbag Stowage",
+    penetration: { drywall: "5 cm", sheetMetal: "1.2 mm", glass: "1-Hit Fracture" },
+    lore: "Lucia's signature concealed carry sidearm seen in the official convenience store robbery. Lightweight polymer frame with ultra-fast draw speed."
+  },
+  {
     id: "wep_carbine_mk2",
     name: "Tactical Service Carbine MK II",
     realWorldCounterpart: "Colt M4A1 / Daniel Defense MK18",
@@ -92,25 +124,9 @@ export const WEAPONS: Weapon[] = [
     accuracy: 88,
     range: 85,
     handling: 74,
-    inventoryMode: "Sling Long Weapon (Vehicle Stowed)",
+    inventoryMode: "Single Long Weapon Sling / Vehicle Trunk Stash",
     penetration: { drywall: "12 cm (Passthrough)", sheetMetal: "4.5 mm", glass: "1 Hit Shatter" },
     lore: "Standard issue for Vice City tactical task forces and cartel enforcers. Modular top rail accommodates holographic red-dot and variable zoom optics."
-  },
-  {
-    id: "wep_combat_pistol",
-    name: "Combat Pistol 9mm",
-    realWorldCounterpart: "Glock 19 Gen 5 / HK VP9",
-    category: "Sidearms",
-    image: "/assets/weapon_combat_pistol.jpg",
-    caliber: "9x19mm Parabellum",
-    fireRate: "Semi-Auto (420 RPM)",
-    damage: 64,
-    accuracy: 82,
-    range: 52,
-    handling: 92,
-    inventoryMode: "Concealed Holster (Fast Draw)",
-    penetration: { drywall: "4 cm", sheetMetal: "1.2 mm", glass: "Deflected" },
-    lore: "Lucia's signature concealed carry sidearm. Features a lightweight polymer frame, match barrel, and threaded muzzle for tactical suppressors."
   },
   {
     id: "wep_heavy_revolver",
@@ -140,7 +156,7 @@ export const WEAPONS: Weapon[] = [
     accuracy: 45,
     range: 35,
     handling: 68,
-    inventoryMode: "Duffel Bag / Trunk Only",
+    inventoryMode: "Duffel Bag / Vehicle Trunk Locker",
     penetration: { drywall: "8 cm Blast Area", sheetMetal: "2.0 mm", glass: "Complete Demolition" },
     lore: "Devastating close-quarters breaching firearm. Destroys hinges and door locks in room-clearing operations across Vice City motels."
   },
@@ -156,7 +172,7 @@ export const WEAPONS: Weapon[] = [
     accuracy: 75,
     range: 95,
     handling: 32,
-    inventoryMode: "Trunk Weapon Stash Only",
+    inventoryMode: "Trunk Weapon Stash Only (Heavy Loadout)",
     penetration: { drywall: "Catastrophic Blast", sheetMetal: "Heavy Armor Breach", glass: "Vaporized" },
     lore: "Military-grade shoulder-fired ordinance capable of destroying armored SWAT BearCats and pursuit helicopters in a single concussion blast."
   }
@@ -166,40 +182,40 @@ export const CHARACTERS: Character[] = [
   {
     id: "char_lucia",
     name: "Lucia",
-    role: "Lead Protagonist",
+    role: "Lead Protagonist (Dual Duo)",
     actor: "Manni L. Perez (Heavily Reported)",
-    faction: "Independent Syndicate / Duo Heist Crew",
+    faction: "Lucia & Jason Syndicate (Independent)",
     image: "/assets/lucia_character_portrait.jpg",
-    status: "Active / On Parole",
+    status: "Active / On Parole (Leonida Dept. of Corrections)",
     origin: "Leonida State Penitentiary / Vice City",
-    specialty: "Tactical Infiltration, Dual Wielding, Precision CQB",
-    bio: "The groundbreaking first female lead in modern 3D Grand Theft Auto history. Hardened by incarceration in Leonida State Penitentiary, Lucia is a calculated, streetwise tactician whose bond with Jason anchors the game's cooperative criminal heists.",
-    traits: ["Calculated Criminal Mind", "High Combat Reflexes", "Fast Lockpicking & Intimidation"]
+    specialty: "Tactical Infiltration, Dual Wielding, Precision CQB, Close-Quarter Intimidation",
+    bio: "Official Rockstar Games Overview: Vice City, USA. Jason and Lucia have always known the deck is stacked against them. Hardened by incarceration in Leonida State Penitentiary, Lucia is a calculated, streetwise tactician whose bond with Jason anchors the game's cooperative criminal heists. When an easy score goes wrong, they find themselves on the darkest side of the sunniest place in America, in the middle of a criminal conspiracy stretching across the state of Leonida — forced to rely on each other more than ever if they want to make it out alive.",
+    traits: ["Calculated Criminal Mind", "High Combat Reflexes", "Fast Lockpicking & Intimidation", "Ankle Monitor Parole Limitations"]
   },
   {
     id: "char_jason",
     name: "Jason",
-    role: "Lead Protagonist",
+    role: "Lead Protagonist (Dual Duo)",
     actor: "Gregory Connors (Reported)",
-    faction: "Independent Syndicate / Duo Heist Crew",
+    faction: "Lucia & Jason Syndicate (Independent)",
     image: "/assets/jason_character_portrait.jpg",
     status: "Active / Operating Underground",
     origin: "Kelly County / Vice City Marina",
-    specialty: "High-Speed Pursuit Evasion, Heavy Arms, Muscle Mechanics",
-    bio: "A pragmatic combat specialist, expert getaway driver, and Lucia's devoted criminal partner. Jason operates out of coastal marinas and rural chop shops, bringing muscle, mechanical prowess, and heavy firepower to their coordinated strikes.",
-    traits: ["Master Getaway Driver", "Heavy Weapon Stability", "Syndicate Street Contacts"]
+    specialty: "High-Speed Pursuit Evasion, Heavy Arms, Muscle Mechanics, Trunk Stash Access",
+    bio: "Official Rockstar Games Overview: Lucia's devoted criminal partner and romantic anchor. A pragmatic combat specialist, expert getaway driver, and military-tactical operative. Jason operates out of coastal marinas and rural chop shops, bringing muscle, mechanical prowess, and heavy firepower to their coordinated strikes. Bound by mutual survival and deep trust ('Trust? - Trust'), he stands at the center of the Leonida criminal conspiracy.",
+    traits: ["Master Getaway Driver", "Heavy Weapon Stability", "Syndicate Street Contacts", "Trunk Armory Specialist"]
   },
   {
     id: "char_stefanie",
     name: "Stefanie G.",
     role: "Correctional Counselor",
-    actor: "Rockstar Performer",
+    actor: "Rockstar Official Performer",
     faction: "Leonida Department of Corrections",
     image: "/assets/stefanie_counselor_portrait.jpg",
     status: "State Official",
     origin: "Leonida State Penitentiary",
     specialty: "Institutional Parole Assessment, Psychological Profiling",
-    bio: "Lucia's correctional counselor at Leonida State Penitentiary seen in Trailer 1's opening dialogue. Represents the institutional surveillance backdrop Lucia must navigate.",
+    bio: "Lucia's correctional counselor at Leonida State Penitentiary seen in Trailer 1's opening dialogue ('Lucia, do you know why you're here? - Bad luck, I guess'). Represents the institutional surveillance apparatus and mandatory parole conditions that Lucia must continually evade.",
     traits: ["State Parole Power", "Psychological Insight", "Legal Oversight"]
   },
   {

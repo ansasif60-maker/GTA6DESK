@@ -1,31 +1,34 @@
 ---
 name: GTA 6 Desk
-description: The Business, News & Strategy Journal of Grand Theft Auto VI
+description: Official Rockstar Games Aesthetic - The Business, News & Strategy Journal of Grand Theft Auto VI
 colors:
-  bg-base: "#F8FAFC"
-  bg-surface: "#FFFFFF"
-  bg-elevated: "#F1F5F9"
-  bg-header: "rgba(255, 255, 255, 0.96)"
-  accent-rose: "#E11D48"
-  accent-cyan: "#0284C7"
-  accent-amber: "#D97706"
-  accent-green: "#16A34A"
-  accent-red: "#DC2626"
-  text-primary: "#0F172A"
-  text-secondary: "#334155"
-  text-muted: "#64748B"
-  text-dim: "#94A3B8"
+  bg-base: "#07090E"
+  bg-surface: "#0E121B"
+  bg-elevated: "#151A26"
+  bg-header: "rgba(7, 9, 14, 0.92)"
+  gradient-vi: "linear-gradient(135deg, #FF007A 0%, #FF5A36 50%, #FFA800 100%)"
+  accent-rose: "#FF007A"
+  accent-sunset: "#FF5A36"
+  accent-amber: "#FFA800"
+  accent-cyan: "#00F0FF"
+  accent-green: "#10B981"
+  text-primary: "#FFFFFF"
+  text-secondary: "#CBD5E1"
+  text-muted: "#8A94A6"
+  text-dim: "#4B5565"
+  border-subtle: "rgba(255, 255, 255, 0.08)"
+  border-default: "rgba(255, 255, 255, 0.14)"
 typography:
   display:
     fontFamily: "Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif"
-    fontSize: "clamp(2.2rem, 3.8vw, 3.1rem)"
-    fontWeight: 800
-    lineHeight: 1.25
+    fontSize: "clamp(2.4rem, 4.2vw, 3.4rem)"
+    fontWeight: 900
+    lineHeight: 1.15
   headline:
     fontFamily: "Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: "clamp(1.65rem, 2.7vw, 2.15rem)"
     fontWeight: 800
-    lineHeight: 1.3
+    lineHeight: 1.25
   title:
     fontFamily: "Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: "clamp(1.25rem, 1.8vw, 1.5rem)"
@@ -53,13 +56,13 @@ spacing:
   "2xl": "52px"
 components:
   button-primary:
-    backgroundColor: "{colors.accent-rose}"
+    background: "{colors.gradient-vi}"
     textColor: "#FFFFFF"
     rounded: "{rounded.sm}"
     padding: "10px 22px"
   button-cyan:
-    backgroundColor: "{colors.accent-cyan}"
-    textColor: "#FFFFFF"
+    background: "{colors.accent-cyan}"
+    textColor: "#07090E"
     rounded: "{rounded.sm}"
     padding: "10px 22px"
   card-surface:
@@ -68,17 +71,17 @@ components:
     padding: "24px"
 ---
 
-# Design System: GTA 6 Desk (Light Editorial Journal)
+# Design System: GTA 6 Desk (Rockstar Games Official Aesthetic)
 
 ## Overview
 
-**Creative Direction: "The Grand Theft Auto VI Business & Gaming Journal"**
+**Creative Direction: "Rockstar Games Vice City Twilight & Obsidian Intelligence"**
 
-GTA 6 Desk is a high-authority, reader-first gaming and business publication covering Grand Theft Auto VI and Take-Two Interactive (NASDAQ: TTWO). It replaces ad-choked wikis and dark retro-terminal gimmicks with a clean, spacious, beautifully typeset light editorial aesthetic.
+GTA 6 Desk is aligned with the official Rockstar Games Grand Theft Auto VI visual identity (`rockstargames.com/VI`). It blends Rockstar's atmospheric, dark neon twilight aesthetic with deep investigative gaming journalism and Take-Two Interactive commercial coverage.
 
 **Key Visual Pillars:**
-- **Pristine Light Canvas:** Calming, premium off-white ground (`#F8FAFC`) with crisp, pure white cards (`#FFFFFF`) and razor-sharp subtle borders (`#E2E8F0`).
-- **Signature Editorial Accents:** Refined Vice City Sunset Rose (`#E11D48`) and Ocean Cyan (`#0284C7`), palm amber (`#D97706`), and verified emerald (`#16A34A`).
-- **World-Class Typography:** Modern geometric-humanist **Plus Jakarta Sans** for headlines and longform reading, paired with **JetBrains Mono** for financial telemetry and stats.
-- **De-cluttered Breathing Room:** Spacious section rhythm, high visual clarity, no noisy retro HUD brackets or flashing REC dots.
-- **Complete Multi-Page Structure:** Full access to all 20 restored pages with working navigation, categories, armory, map, and financial tools.
+- **Obsidian Dark Canvas:** Deep, immersive midnight tones (`#07090E` base, `#0E121B` card surfaces, `#151A26` elevated containers) with 1px glassmorphic borders (`rgba(255, 255, 255, 0.08)`).
+- **Official Rockstar VI Sunset Gradients:** High-saturation gradient transitions matching the official logo and keyart — intense neon magenta (`#FF007A`) through warm sunset flare (`#FF5A36`) into amber gold (`#FFA800`).
+- **Atmospheric Vice City Ambient Lighting:** Radial lighting effects reflecting the sun-drenched, neon-drenched atmosphere of Vice City and Leonida.
+- **World-Class Contrast & Typography:** Ultra-crisp `#FFFFFF` primary headings, `#CBD5E1` high-legibility body copy, paired with **Plus Jakarta Sans** and **JetBrains Mono** telemetry badges.
+- **Full Operational Depth:** 23 Next.js App Router routes including character lore, physical weapon stowage mechanics, interactive Leonida map, and interactive ROI financial engines.

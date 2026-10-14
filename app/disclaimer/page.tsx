@@ -31,7 +31,7 @@ export default function DisclaimerPage() {
 
         <section style={{ padding: '48px 0' }}>
           <div className="container" style={{ maxWidth: '820px' }}>
-            <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
+            <div style={{ background: 'var(--bg-surface)', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
               <h2 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '12px' }}>Non-Affiliation Notice</h2>
               <p style={{ fontSize: '0.98rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '20px' }}>
                 GTA 6 DESK is an independent journalistic website and is not associated, affiliated, endorsed, or sponsored by Rockstar Games, Take-Two Interactive Software, Inc., Sony Interactive Entertainment, or Microsoft Corporation.

@@ -18,7 +18,7 @@ export default function HomePage() {
 
       <main style={{ minHeight: '80vh', paddingBottom: 'var(--space-3xl)' }}>
         {/* Sleek Hero Header */}
-        <section style={{ padding: '48px 0 32px', background: 'var(--bg-base)' }}>
+        <section style={{ padding: '48px 0 32px', background: 'radial-gradient(ellipse at 50% -20%, rgba(255, 0, 122, 0.18) 0%, rgba(0, 240, 255, 0.05) 50%, transparent 80%), var(--bg-base)' }}>
           <div className="container">
             <div style={{ maxWidth: '820px', marginBottom: '32px' }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
@@ -97,7 +97,7 @@ export default function HomePage() {
         </section>
 
         {/* Characters Highlight */}
-        <section className="section-wrapper" style={{ background: '#FFFFFF' }}>
+        <section className="section-wrapper" style={{ background: 'var(--bg-surface)' }}>
           <div className="container">
             <div className="section-header-row">
               <div>
@@ -157,7 +157,7 @@ export default function HomePage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
               {MAP_ZONES.slice(0, 4).map((zone) => (
-                <div key={zone.id} className="spotlight-item" style={{ background: '#FFFFFF', padding: '20px' }}>
+                <div key={zone.id} className="spotlight-item" style={{ background: 'var(--bg-surface)', padding: '20px' }}>
                   <span className="badge-category lore" style={{ fontSize: '0.7rem' }}>{zone.district}</span>
                   <h3 style={{ fontSize: '1.15rem', fontWeight: 800, margin: '8px 0 6px', color: 'var(--text-primary)' }}>
                     {zone.name}
@@ -175,7 +175,7 @@ export default function HomePage() {
         </section>
 
         {/* Financial & Corporate Desk */}
-        <section className="section-wrapper" style={{ background: '#FFFFFF' }}>
+        <section className="section-wrapper" style={{ background: 'var(--bg-surface)' }}>
           <div className="container">
             <div className="section-header-row">
               <div>

@@ -69,7 +69,7 @@ export default function WeaponsPage() {
                     padding: '8px 14px',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--border-default)',
-                    background: '#FFFFFF',
+                    background: 'var(--bg-surface)',
                     fontSize: '0.88rem',
                     fontFamily: 'var(--font-body)',
                     color: 'var(--text-primary)',
@@ -86,7 +86,7 @@ export default function WeaponsPage() {
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '24px' }}>
               {filteredWeapons.map((w) => (
-                <div key={w.id} className="weapon-card" style={{ background: '#FFFFFF' }}>
+                <div key={w.id} className="weapon-card" style={{ background: 'var(--bg-surface)' }}>
                   <div className="weapon-image-wrap">
                     <img src={w.image} alt={w.name} className="weapon-card-img" />
                     <span className="weapon-class-badge">{w.category}</span>

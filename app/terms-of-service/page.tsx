@@ -31,7 +31,7 @@ export default function TermsOfServicePage() {
 
         <section style={{ padding: '48px 0' }}>
           <div className="container" style={{ maxWidth: '820px' }}>
-            <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
+            <div style={{ background: 'var(--bg-surface)', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
               <h2 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '12px' }}>1. Acceptance of Terms</h2>
               <p style={{ fontSize: '0.98rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '20px' }}>
                 By accessing GTA 6 DESK, you agree to comply with and be bound by these Terms of Service. If you disagree with any part of these terms, you should discontinue use immediately.

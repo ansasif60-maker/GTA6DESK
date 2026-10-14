@@ -38,7 +38,7 @@ export default function CategoriesPage() {
                 <div
                   key={cat.id}
                   style={{
-                    background: '#FFFFFF',
+                    background: 'var(--bg-surface)',
                     border: '1px solid var(--border-subtle)',
                     borderRadius: 'var(--radius-lg)',
                     padding: '24px',

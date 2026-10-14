@@ -35,7 +35,7 @@ export default function ContactPage() {
 
         <section style={{ padding: '48px 0' }}>
           <div className="container" style={{ maxWidth: '680px' }}>
-            <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
+            <div style={{ background: 'var(--bg-surface)', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '32px 0' }}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>✓</div>
@@ -61,7 +61,9 @@ export default function ContactPage() {
                         border: '1px solid var(--border-default)',
                         fontSize: '0.9rem',
                         fontFamily: 'var(--font-body)',
-                        outline: 'none'
+                        outline: 'none',
+                        background: 'var(--bg-elevated)',
+                        color: 'var(--text-primary)'
                       }}
                     />
                   </div>
@@ -81,7 +83,9 @@ export default function ContactPage() {
                         border: '1px solid var(--border-default)',
                         fontSize: '0.9rem',
                         fontFamily: 'var(--font-body)',
-                        outline: 'none'
+                        outline: 'none',
+                        background: 'var(--bg-elevated)',
+                        color: 'var(--text-primary)'
                       }}
                     />
                   </div>
@@ -99,7 +103,8 @@ export default function ContactPage() {
                         fontSize: '0.9rem',
                         fontFamily: 'var(--font-body)',
                         outline: 'none',
-                        background: '#FFFFFF'
+                        background: 'var(--bg-elevated)',
+                        color: 'var(--text-primary)'
                       }}
                     >
                       <option>Verified News Tip / Leak Verification</option>
@@ -124,7 +129,9 @@ export default function ContactPage() {
                         border: '1px solid var(--border-default)',
                         fontSize: '0.9rem',
                         fontFamily: 'var(--font-body)',
-                        outline: 'none'
+                        outline: 'none',
+                        background: 'var(--bg-elevated)',
+                        color: 'var(--text-primary)'
                       }}
                     />
                   </div>

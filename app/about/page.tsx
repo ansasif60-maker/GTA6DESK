@@ -31,7 +31,7 @@ export default function AboutPage() {
 
         <section style={{ padding: '48px 0' }}>
           <div className="container" style={{ maxWidth: '820px' }}>
-            <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
+            <div style={{ background: 'var(--bg-surface)', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
               <h2 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '16px' }}>Our Editorial Philosophy</h2>
               <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '20px' }}>
                 In an era dominated by clickbait rumors, AI hallucinated leaks, and social media speculation, GTA 6 DESK was founded to deliver rigorous, verified, and calm journalism. We cross-reference every report with official Rockstar Games press communications, patent filings, and Take-Two Interactive SEC Form 10-K and 10-Q documents.

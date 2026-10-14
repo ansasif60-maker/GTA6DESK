@@ -57,12 +57,37 @@ export default function CharactersPage() {
           </div>
         </section>
 
+        {/* Official Story Premise Banner */}
+        <section style={{ padding: '16px 0 0' }}>
+          <div className="container">
+            <div
+              style={{
+                background: 'linear-gradient(135deg, rgba(255, 0, 122, 0.12) 0%, rgba(20, 26, 40, 0.8) 100%)',
+                border: '1px solid var(--border-rose)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '24px 28px',
+                boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 0, 122, 0.1)',
+              }}
+            >
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                <span className="badge-category news">OFFICIAL ROCKSTAR GAMES SYNOPSIS</span>
+                <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+                  VICE CITY &amp; STATE OF LEONIDA
+                </span>
+              </div>
+              <p style={{ fontSize: '1.02rem', color: 'var(--text-primary)', lineHeight: 1.65, margin: 0, fontStyle: 'italic' }}>
+                &ldquo;Vice City, USA. Jason and Lucia have always known the deck is stacked against them. But when an easy score goes wrong, they find themselves on the darkest side of the sunniest place in America, in the middle of a criminal conspiracy stretching across the state of Leonida — forced to rely on each other more than ever if they want to make it out alive.&rdquo;
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Characters Grid */}
-        <section style={{ padding: '40px 0' }}>
+        <section style={{ padding: '36px 0' }}>
           <div className="container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(380px, 1fr))', gap: '28px' }}>
               {filteredCharacters.map((c) => (
-                <div key={c.id} className="character-card" style={{ background: '#FFFFFF' }}>
+                <div key={c.id} className="character-card" style={{ background: 'var(--bg-surface)' }}>
                   <div className="character-portrait-box">
                     <img src={c.image} alt={c.name} className="character-portrait-img" />
                     <span className="character-status-badge">{c.status}</span>

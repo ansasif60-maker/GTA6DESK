@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
 
         <section style={{ padding: '48px 0' }}>
           <div className="container" style={{ maxWidth: '820px' }}>
-            <div style={{ background: '#FFFFFF', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
+            <div style={{ background: 'var(--bg-surface)', padding: '36px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
               <h2 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '12px' }}>1. Data Collection & Analytics</h2>
               <p style={{ fontSize: '0.98rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '20px' }}>
                 GTA 6 DESK collects minimal telemetry essential to delivering high-performance content delivery and preventing bot attacks. We do not sell personal identification data to third parties.
