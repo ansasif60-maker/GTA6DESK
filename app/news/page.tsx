@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ARTICLES, Article } from '@/lib/data';
@@ -29,31 +30,16 @@ function getClusterBadgeLabel(clusterName: string): string {
 export default function NewsPage() {
   const [selectedCluster, setSelectedCluster] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [activeArticle, setActiveArticle] = useState<Article | null>(null);
 
-  // Check URL query parameters for ?article=ID or ?id=ID to auto-open modal from homepage links
+  // Backward compatibility redirect for ?article=ID or ?id=ID
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const articleId = params.get('article') || params.get('id');
       if (articleId) {
-        const found = ARTICLES.find((a) => a.id === Number(articleId));
-        if (found) {
-          setActiveArticle(found);
-        }
+        window.location.href = `/news/${articleId}`;
       }
     }
-  }, []);
-
-  // Keyboard escape listener to close article dossier
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setActiveArticle(null);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const filteredArticles = ARTICLES.filter((a) => {
@@ -237,11 +223,9 @@ export default function NewsPage() {
 
                       {/* Symmetrical Headline (Exact 2 lines uniform height across all cards) */}
                       <h2
-                        onClick={() => setActiveArticle(a)}
                         style={{
                           fontSize: '1.2rem',
                           fontWeight: 800,
-                          color: 'var(--text-primary)',
                           marginBottom: '12px',
                           lineHeight: 1.35,
                           height: '3.3rem',
@@ -249,15 +233,24 @@ export default function NewsPage() {
                           WebkitLineClamp: 2,
                           WebkitBoxOrient: 'vertical',
                           overflow: 'hidden',
-                          textOverflow: 'ellipsis',
-                          cursor: 'pointer',
-                          transition: 'color 0.2s ease'
+                          textOverflow: 'ellipsis'
                         }}
                         title={a.title}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-rose)')}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
                       >
-                        {a.title}
+                        <Link
+                          href={`/news/${a.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: 'var(--text-primary)',
+                            textDecoration: 'none',
+                            transition: 'color 0.2s ease'
+                          }}
+                          onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-rose)')}
+                          onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
+                        >
+                          {a.title}
+                        </Link>
                       </h2>
 
                       {/* Symmetrical Lead Paragraph (Exact 3 lines uniform height across all cards) */}
@@ -302,9 +295,10 @@ export default function NewsPage() {
                       >
                         #{a.targetKeyword.replace(/\s+/g, '_')}
                       </span>
-                      <button
-                        type="button"
-                        onClick={() => setActiveArticle(a)}
+                      <Link
+                        href={`/news/${a.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn btn-ghost"
                         style={{
                           flexShrink: 0,
@@ -315,11 +309,14 @@ export default function NewsPage() {
                           borderColor: 'rgba(0, 240, 255, 0.35)',
                           background: 'rgba(0, 240, 255, 0.06)',
                           cursor: 'pointer',
-                          whiteSpace: 'nowrap'
+                          whiteSpace: 'nowrap',
+                          textDecoration: 'none',
+                          display: 'inline-flex',
+                          alignItems: 'center'
                         }}
                       >
                         Read Analysis →
-                      </button>
+                      </Link>
                     </div>
                   </article>
                 ))}
@@ -327,225 +324,6 @@ export default function NewsPage() {
             )}
           </div>
         </section>
-
-        {/* Interactive Full Article Dossier Modal */}
-        {activeArticle && (
-          <div
-            onClick={() => setActiveArticle(null)}
-            style={{
-              position: 'fixed',
-              inset: 0,
-              backgroundColor: 'rgba(3, 5, 8, 0.88)',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)',
-              zIndex: 9999,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '20px'
-            }}
-          >
-            <div
-              onClick={(e) => e.stopPropagation()}
-              style={{
-                backgroundColor: 'var(--bg-surface)',
-                border: '1px solid rgba(0, 240, 255, 0.35)',
-                borderRadius: 'var(--radius-lg)',
-                maxWidth: '820px',
-                width: '100%',
-                maxHeight: '88vh',
-                overflowY: 'auto',
-                boxShadow: '0 24px 70px rgba(0, 0, 0, 0.85), 0 0 30px rgba(0, 240, 255, 0.15)',
-                padding: '36px',
-                position: 'relative'
-              }}
-            >
-              {/* Top Accent Gradient Bar */}
-              <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '4px',
-                background: 'var(--gradient-vi)'
-              }} />
-
-              {/* Close Button */}
-              <button
-                type="button"
-                onClick={() => setActiveArticle(null)}
-                aria-label="Close Dossier"
-                style={{
-                  position: 'absolute',
-                  top: '18px',
-                  right: '20px',
-                  background: 'var(--bg-elevated)',
-                  border: '1px solid var(--border-default)',
-                  borderRadius: '50%',
-                  width: '36px',
-                  height: '36px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--text-primary)',
-                  fontSize: '1.1rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--accent-rose)';
-                  e.currentTarget.style.color = 'var(--accent-rose)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--border-default)';
-                  e.currentTarget.style.color = 'var(--text-primary)';
-                }}
-              >
-                ✕
-              </button>
-
-              {/* Meta Header */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '14px' }}>
-                <span className="badge-category news" style={{ fontSize: '0.75rem' }}>
-                  {activeArticle.clusterName}
-                </span>
-                <span style={{
-                  fontSize: '0.72rem',
-                  fontFamily: 'var(--font-mono)',
-                  color: 'var(--accent-cyan)',
-                  background: 'rgba(0, 240, 255, 0.08)',
-                  padding: '2px 8px',
-                  borderRadius: '4px',
-                  border: '1px solid rgba(0, 240, 255, 0.25)'
-                }}>
-                  NODE #{activeArticle.id}
-                </span>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-                  #{activeArticle.targetKeyword.replace(/\s+/g, '_')}
-                </span>
-              </div>
-
-              {/* Article Title */}
-              <h2 style={{
-                fontSize: 'clamp(1.5rem, 2.5vw, 2.1rem)',
-                fontWeight: 900,
-                color: 'var(--text-primary)',
-                lineHeight: 1.25,
-                margin: '0 0 16px'
-              }}>
-                {activeArticle.title}
-              </h2>
-
-              {/* Editorial Byline */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '12px',
-                fontSize: '0.82rem',
-                color: 'var(--text-muted)',
-                paddingBottom: '16px',
-                marginBottom: '20px',
-                borderBottom: '1px solid var(--border-subtle)',
-                flexWrap: 'wrap'
-              }}>
-                <span>By <strong>GTA 6 DESK Intelligence Staff</strong></span>
-                <span>•</span>
-                <span>Official Verification: Rockstar Newswire & SEC Form 10-Q</span>
-                <span>•</span>
-                <span style={{ color: 'var(--accent-cyan)' }}>Wikidata: {activeArticle.wikidata || 'Q115688534'}</span>
-              </div>
-
-              {/* Semantic EAV Triple (If Available) */}
-              {activeArticle.eav && (
-                <div style={{
-                  background: 'var(--bg-base)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: '16px 20px',
-                  marginBottom: '24px'
-                }}>
-                  <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', marginBottom: '8px', letterSpacing: '0.05em' }}>
-                    SEMANTIC ENTITY-ATTRIBUTE-VALUE TRIPLE:
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', fontSize: '0.85rem' }}>
-                    <div>
-                      <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.72rem' }}>CENTRAL ENTITY:</span>
-                      <strong style={{ color: 'var(--accent-cyan)' }}>{activeArticle.eav.entity}</strong>
-                    </div>
-                    <div>
-                      <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.72rem' }}>VERIFIED ATTRIBUTE:</span>
-                      <strong style={{ color: 'var(--text-primary)' }}>{activeArticle.eav.attribute}</strong>
-                    </div>
-                    <div>
-                      <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.72rem' }}>CANONICAL VALUE:</span>
-                      <strong style={{ color: 'var(--accent-amber)' }}>{activeArticle.eav.value}</strong>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Lead Paragraph */}
-              <div style={{
-                fontSize: '1.08rem',
-                fontWeight: 600,
-                color: 'var(--text-primary)',
-                lineHeight: 1.7,
-                marginBottom: '24px',
-                borderLeft: '3px solid var(--accent-rose)',
-                paddingLeft: '16px',
-                background: 'rgba(255, 0, 122, 0.04)',
-                padding: '16px 20px',
-                borderRadius: '0 var(--radius-sm) var(--radius-sm) 0'
-              }}>
-                {activeArticle.leadParagraph}
-              </div>
-
-              {/* In-Depth Investigation Analysis */}
-              <div style={{ marginBottom: '28px' }}>
-                <h3 style={{ fontSize: '1rem', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px' }}>
-                  IN-DEPTH INVESTIGATION & TECHNICAL ANALYSIS
-                </h3>
-                <div style={{
-                  background: 'var(--bg-elevated)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: '24px',
-                  fontSize: '0.98rem',
-                  lineHeight: 1.8,
-                  color: 'var(--text-secondary)'
-                }}>
-                  {activeArticle.tokenChunk || activeArticle.leadParagraph}
-                </div>
-              </div>
-
-              {/* Modal Footer Actions */}
-              <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                paddingTop: '20px',
-                borderTop: '1px solid var(--border-subtle)',
-                flexWrap: 'wrap',
-                gap: '12px'
-              }}>
-                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-                  PRESS ESC OR CLICK OUTSIDE TO CLOSE
-                </div>
-
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <button
-                    type="button"
-                    onClick={() => setActiveArticle(null)}
-                    className="btn btn-primary"
-                    style={{ padding: '8px 20px', fontSize: '0.88rem' }}
-                  >
-                    Close Dossier
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </main>
 
       <Footer />

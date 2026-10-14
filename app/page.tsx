@@ -238,13 +238,13 @@ export default function HomePage() {
                       </span>
                     </div>
                     <h3 className="story-title" style={{ height: '3.2rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                      <Link href={`/news?article=${art.id}`} title={art.title}>{art.title}</Link>
+                      <Link href={`/news/${art.id}`} target="_blank" rel="noopener noreferrer" title={art.title}>{art.title}</Link>
                     </h3>
                     <p className="story-excerpt" style={{ height: '4.6rem', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis', marginBottom: '16px' }}>
                       {art.leadParagraph}
                     </p>
                     <div style={{ marginTop: 'auto', paddingTop: '12px', borderTop: '1px solid var(--border-subtle)' }}>
-                      <Link href={`/news?article=${art.id}`} className="btn btn-ghost" style={{ padding: '6px 14px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--accent-cyan)', borderColor: 'rgba(0, 240, 255, 0.35)', background: 'rgba(0, 240, 255, 0.06)', display: 'inline-flex' }}>
+                      <Link href={`/news/${art.id}`} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: '6px 14px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--accent-cyan)', borderColor: 'rgba(0, 240, 255, 0.35)', background: 'rgba(0, 240, 255, 0.06)', display: 'inline-flex' }}>
                         Read Analysis →
                       </Link>
                     </div>
