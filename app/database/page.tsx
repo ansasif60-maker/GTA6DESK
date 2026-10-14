@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -80,10 +80,35 @@ const DATABASE_ITEMS: DatabaseItem[] = [
 
 export default function DatabasePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const categories = ['All', 'Vehicles', 'Police Intelligence', 'Game Mechanics'];
 
+  // Check URL search parameters on mount (for site search queries from Google Sitelinks or internal links)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('q');
+      if (q) {
+        setSearchQuery(q);
+      }
+    }
+  }, []);
+
   const filteredItems = DATABASE_ITEMS.filter((item) => {
-    return selectedCategory === 'All' || item.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+    const query = searchQuery.toLowerCase().trim();
+    if (!query) return matchesCategory;
+
+    const matchesQuery =
+      item.name.toLowerCase().includes(query) ||
+      (item.realWorldCounterpart && item.realWorldCounterpart.toLowerCase().includes(query)) ||
+      item.category.toLowerCase().includes(query) ||
+      item.details.toLowerCase().includes(query) ||
+      Object.entries(item.specs).some(([k, v]) =>
+        k.toLowerCase().includes(query) || v.toLowerCase().includes(query)
+      );
+
+    return matchesCategory && matchesQuery;
   });
 
   return (
@@ -94,83 +119,226 @@ export default function DatabasePage() {
         {/* Page Header */}
         <section style={{ padding: '48px 0 32px', background: 'var(--bg-base)', borderBottom: '1px solid var(--border-subtle)' }}>
           <div className="container">
-            <div style={{ maxWidth: '780px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                <span className="badge-category news">RELATIONAL INTELLIGENCE</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-                  Vehicles, AI Mechanics & Laws
-                </span>
+            <div style={{ maxWidth: '820px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+                <img
+                  src="/assets/gta6desk_logo.png"
+                  alt="GTA 6 DESK Logo"
+                  width={56}
+                  height={56}
+                  style={{
+                    borderRadius: '12px',
+                    border: '1px solid rgba(0, 240, 255, 0.45)',
+                    boxShadow: '0 0 16px rgba(0, 240, 255, 0.35)',
+                    flexShrink: 0
+                  }}
+                />
+                <div>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                    <span className="badge-category news">RELATIONAL INTELLIGENCE</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>
+                      Vehicles, AI Mechanics & Laws
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', fontWeight: 700 }}>
+                    GTA6DESK // MASTER RELATIONAL SEARCH
+                  </div>
+                </div>
               </div>
+
               <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 800, margin: '0 0 12px', lineHeight: 1.2 }}>
                 Grand Theft Auto VI Intelligence Database
               </h1>
               <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
-                Relational index cataloging verified vehicle rosters, law enforcement tactical AI, and next-generation inventory mechanics.
+                Relational search index cataloging verified vehicle rosters, law enforcement tactical AI, and next-generation inventory mechanics.
               </p>
             </div>
 
-            {/* Filter buttons */}
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '28px' }}>
-              {categories.map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setSelectedCategory(c)}
-                  className={`btn ${selectedCategory === c ? 'btn-primary' : 'btn-ghost'}`}
-                  style={{ fontSize: '0.85rem', padding: '6px 14px' }}
-                >
-                  {c}
-                </button>
-              ))}
+            {/* Interactive Search Bar with Logo Integration */}
+            <div style={{ marginTop: '28px', maxWidth: '780px' }}>
+              <div style={{
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
+                background: 'var(--bg-surface)',
+                borderRadius: 'var(--radius-md)',
+                border: '1px solid rgba(0, 240, 255, 0.3)',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(0, 240, 255, 0.1)',
+                padding: '4px 8px 4px 14px'
+              }}>
+                <img
+                  src="/assets/gta6desk_logo.png"
+                  alt="Search Icon"
+                  width={24}
+                  height={24}
+                  style={{ borderRadius: '4px', marginRight: '10px', flexShrink: 0 }}
+                />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search intelligence database (e.g. Demon, SWAT, Trunk, Cheetah)..."
+                  style={{
+                    width: '100%',
+                    background: 'transparent',
+                    border: 'none',
+                    outline: 'none',
+                    color: 'var(--text-primary)',
+                    fontSize: '0.95rem',
+                    fontFamily: 'var(--font-body)',
+                    padding: '10px 0'
+                  }}
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery('')}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: 'var(--text-muted)',
+                      cursor: 'pointer',
+                      padding: '8px',
+                      fontSize: '1rem',
+                      lineHeight: 1
+                    }}
+                    title="Clear Search"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Filter buttons & Results Telemetry */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', marginTop: '20px' }}>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                {categories.map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setSelectedCategory(c)}
+                    className={`btn ${selectedCategory === c ? 'btn-primary' : 'btn-ghost'}`}
+                    style={{ fontSize: '0.85rem', padding: '6px 14px' }}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+
+              <div style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+                INDEXED: <strong style={{ color: 'var(--accent-cyan)' }}>{filteredItems.length}</strong> RECORDS
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Database Grid */}
+        {/* Database Search Results Grid */}
         <section style={{ padding: '40px 0' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '24px' }}>
-              {filteredItems.map((item) => (
-                <div
-                  key={item.id}
-                  style={{
-                    background: 'var(--bg-surface)',
-                    border: '1px solid var(--border-subtle)',
-                    borderRadius: 'var(--radius-lg)',
-                    padding: '24px',
-                    boxShadow: 'var(--shadow-xs)'
-                  }}
+            {filteredItems.length === 0 ? (
+              <div style={{
+                textAlign: 'center',
+                padding: '64px 20px',
+                background: 'var(--bg-surface)',
+                borderRadius: 'var(--radius-lg)',
+                border: '1px solid var(--border-subtle)',
+                maxWidth: '640px',
+                margin: '0 auto'
+              }}>
+                <img
+                  src="/assets/gta6desk_logo.png"
+                  alt="GTA 6 DESK Logo"
+                  width={64}
+                  height={64}
+                  style={{ borderRadius: '14px', marginBottom: '16px', opacity: 0.8 }}
+                />
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '8px' }}>
+                  No Intelligence Records Found
+                </h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '20px' }}>
+                  No database entries matched &ldquo;{searchQuery}&rdquo;. Try searching for &ldquo;Demon&rdquo;, &ldquo;SWAT&rdquo;, &ldquo;Trunk&rdquo;, or reset the category filter.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
+                  className="btn btn-primary"
+                  style={{ padding: '8px 20px' }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                    <span className="badge-category tech" style={{ fontSize: '0.75rem' }}>{item.category}</span>
-                  </div>
-
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
-                    {item.name}
-                  </h3>
-
-                  {item.realWorldCounterpart && (
-                    <div style={{ fontSize: '0.82rem', color: 'var(--accent-cyan)', fontWeight: 600, marginBottom: '12px' }}>
-                      Real Counterpart: {item.realWorldCounterpart}
-                    </div>
-                  )}
-
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '20px' }}>
-                    {item.details}
-                  </p>
-
-                  <div style={{ background: 'var(--bg-base)', padding: '14px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', fontSize: '0.82rem' }}>
-                      {Object.entries(item.specs).map(([k, v]) => (
-                        <div key={k}>
-                          <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem' }}>{k}</span>
-                          <strong style={{ color: 'var(--text-primary)' }}>{v}</strong>
+                  Reset Search Filters
+                </button>
+              </div>
+            ) : (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '24px' }}>
+                {filteredItems.map((item) => (
+                  <div
+                    key={item.id}
+                    style={{
+                      background: 'var(--bg-surface)',
+                      border: '1px solid var(--border-subtle)',
+                      borderRadius: 'var(--radius-lg)',
+                      padding: '24px',
+                      boxShadow: 'var(--shadow-xs)',
+                      position: 'relative',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between'
+                    }}
+                  >
+                    <div>
+                      {/* Card Header with Verified Logo Badge */}
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                        <span className="badge-category tech" style={{ fontSize: '0.75rem' }}>{item.category}</span>
+                        <div style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          background: 'rgba(0, 240, 255, 0.08)',
+                          border: '1px solid rgba(0, 240, 255, 0.25)',
+                          padding: '3px 8px',
+                          borderRadius: '4px'
+                        }}>
+                          <img
+                            src="/assets/gta6desk_logo.png"
+                            alt="Verified"
+                            width={14}
+                            height={14}
+                            style={{ borderRadius: '3px' }}
+                          />
+                          <span style={{ fontSize: '0.68rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontWeight: 700 }}>
+                            GTA6DESK VERIFIED
+                          </span>
                         </div>
-                      ))}
+                      </div>
+
+                      <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                        {item.name}
+                      </h3>
+
+                      {item.realWorldCounterpart && (
+                        <div style={{ fontSize: '0.82rem', color: 'var(--accent-cyan)', fontWeight: 600, marginBottom: '12px' }}>
+                          Real Counterpart: {item.realWorldCounterpart}
+                        </div>
+                      )}
+
+                      <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '20px' }}>
+                        {item.details}
+                      </p>
+                    </div>
+
+                    <div style={{ background: 'var(--bg-base)', padding: '14px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', fontSize: '0.82rem' }}>
+                        {Object.entries(item.specs).map(([k, v]) => (
+                          <div key={k}>
+                            <span style={{ color: 'var(--text-muted)', display: 'block', fontSize: '0.75rem' }}>{k}</span>
+                            <strong style={{ color: 'var(--text-primary)' }}>{v}</strong>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </main>

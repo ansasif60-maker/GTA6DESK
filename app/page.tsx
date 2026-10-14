@@ -21,11 +21,30 @@ export default function HomePage() {
         <section style={{ padding: '48px 0 32px', background: 'radial-gradient(ellipse at 50% -20%, rgba(255, 0, 122, 0.18) 0%, rgba(0, 240, 255, 0.05) 50%, transparent 80%), var(--bg-base)' }}>
           <div className="container">
             <div style={{ maxWidth: '820px', marginBottom: '32px' }}>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                <span className="badge-category news">FALL 2025/2026 RELEASE</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-                  PlayStation 5 · Xbox Series X|S
-                </span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+                <img
+                  src="/assets/gta6desk_logo.png"
+                  alt="GTA 6 DESK Official Logo"
+                  width={64}
+                  height={64}
+                  style={{
+                    borderRadius: '14px',
+                    border: '1px solid rgba(0, 240, 255, 0.45)',
+                    boxShadow: '0 0 20px rgba(0, 240, 255, 0.35)',
+                    flexShrink: 0
+                  }}
+                />
+                <div>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                    <span className="badge-category news">FALL 2025/2026 RELEASE</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>
+                      PlayStation 5 · Xbox Series X|S
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', fontWeight: 700 }}>
+                    GTA6DESK // OFFICIAL INTELLIGENCE JOURNAL
+                  </div>
+                </div>
               </div>
               <h1 style={{ fontSize: 'clamp(2.4rem, 4vw, 3.4rem)', fontWeight: 800, margin: '0 0 16px', lineHeight: 1.2 }}>
                 Grand Theft Auto VI Intelligence Journal

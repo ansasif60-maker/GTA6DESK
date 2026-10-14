@@ -7,9 +7,43 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand-col">
-            <Link href="/" className="brand-logo" style={{ marginBottom: '12px', display: 'inline-flex' }}>
-              <span>GTA 6 DESK</span>
-              <span className="brand-badge">JOURNAL</span>
+            <Link href="/" className="brand-logo" style={{ marginBottom: '16px', display: 'inline-flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+              <img
+                src="/assets/gta6desk_logo.png"
+                alt="GTA 6 DESK Logo"
+                width={48}
+                height={48}
+                style={{
+                  borderRadius: '10px',
+                  border: '1px solid rgba(0, 240, 255, 0.45)',
+                  boxShadow: '0 0 16px rgba(0, 240, 255, 0.3)',
+                  objectFit: 'cover'
+                }}
+              />
+              <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{
+                    fontSize: '1.35rem',
+                    fontWeight: 900,
+                    letterSpacing: '0.04em',
+                    background: 'var(--gradient-vi)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}>
+                    GTA 6 DESK
+                  </span>
+                  <span className="brand-badge">JOURNAL</span>
+                </div>
+                <span style={{
+                  fontSize: '0.68rem',
+                  color: 'var(--text-muted)',
+                  fontFamily: 'var(--font-mono)',
+                  letterSpacing: '0.06em',
+                  fontWeight: 600
+                }}>
+                  FLAGSHIP INTELLIGENCE TERMINAL
+                </span>
+              </div>
             </Link>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '380px' }}>
               Independent editorial journal dedicated to Grand Theft Auto VI news, technical analysis, and Take-Two Interactive (NASDAQ: TTWO) corporate intelligence.
