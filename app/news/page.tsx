@@ -15,6 +15,17 @@ const CLUSTERS = [
   { id: 'Hardware, Engine Tech & Benchmarks', label: '6. Hardware & Benchmarks' }
 ];
 
+function getClusterBadgeLabel(clusterName: string): string {
+  if (!clusterName) return 'INTELLIGENCE';
+  if (clusterName.includes('Release')) return 'RELEASE & GOVERNANCE';
+  if (clusterName.includes('Narrative') || clusterName.includes('Characters')) return 'CHARACTERS & LORE';
+  if (clusterName.includes('Cartography')) return 'CARTOGRAPHY & MAP';
+  if (clusterName.includes('Armory')) return 'ARMORY & BALLISTICS';
+  if (clusterName.includes('Vehicle')) return 'VEHICLES & FLEET';
+  if (clusterName.includes('Hardware')) return 'HARDWARE & BENCHMARKS';
+  return clusterName.toUpperCase();
+}
+
 export default function NewsPage() {
   const [selectedCluster, setSelectedCluster] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -189,39 +200,106 @@ export default function NewsPage() {
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'space-between',
+                      overflow: 'hidden',
+                      height: '100%',
                       transition: 'border-color 0.2s ease, transform 0.2s ease'
                     }}
                   >
                     <div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                        <span className="badge-category lore" style={{ fontSize: '0.75rem' }}>{a.clusterName}</span>
-                        <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>NODE #{a.id}</span>
+                      {/* Symmetrical Yellow Badge & Node ID Row */}
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        minHeight: '28px',
+                        marginBottom: '14px',
+                        gap: '8px'
+                      }}>
+                        <span className="badge-category lore" style={{
+                          fontSize: '0.72rem',
+                          fontWeight: 700,
+                          letterSpacing: '0.04em',
+                          textTransform: 'uppercase',
+                          whiteSpace: 'nowrap',
+                          lineHeight: 1
+                        }}>
+                          {getClusterBadgeLabel(a.clusterName)}
+                        </span>
+                        <span style={{
+                          fontSize: '0.75rem',
+                          color: 'var(--text-muted)',
+                          fontFamily: 'var(--font-mono)',
+                          flexShrink: 0
+                        }}>
+                          NODE #{a.id}
+                        </span>
                       </div>
 
+                      {/* Symmetrical Headline (Exact 2 lines uniform height across all cards) */}
                       <h2
                         onClick={() => setActiveArticle(a)}
                         style={{
-                          fontSize: '1.25rem',
+                          fontSize: '1.2rem',
                           fontWeight: 800,
                           color: 'var(--text-primary)',
                           marginBottom: '12px',
                           lineHeight: 1.35,
+                          height: '3.3rem',
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
                           cursor: 'pointer',
                           transition: 'color 0.2s ease'
                         }}
+                        title={a.title}
                         onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-rose)')}
                         onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
                       >
                         {a.title}
                       </h2>
 
-                      <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '20px' }}>
+                      {/* Symmetrical Lead Paragraph (Exact 3 lines uniform height across all cards) */}
+                      <p style={{
+                        fontSize: '0.9rem',
+                        color: 'var(--text-secondary)',
+                        lineHeight: 1.6,
+                        height: '4.5rem',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 3,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        marginBottom: '16px'
+                      }}>
                         {a.leadParagraph}
                       </p>
                     </div>
 
-                    <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+                    {/* Symmetrical Card Footer: Hashtag + Button securely inside the box */}
+                    <div style={{
+                      borderTop: '1px solid var(--border-subtle)',
+                      paddingTop: '14px',
+                      marginTop: 'auto',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      gap: '12px'
+                    }}>
+                      <span
+                        style={{
+                          fontSize: '0.75rem',
+                          color: 'var(--text-muted)',
+                          fontFamily: 'var(--font-mono)',
+                          flex: '1 1 auto',
+                          minWidth: 0,
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap'
+                        }}
+                        title={`#${a.targetKeyword.replace(/\s+/g, '_')}`}
+                      >
                         #{a.targetKeyword.replace(/\s+/g, '_')}
                       </span>
                       <button
@@ -229,12 +307,15 @@ export default function NewsPage() {
                         onClick={() => setActiveArticle(a)}
                         className="btn btn-ghost"
                         style={{
-                          padding: '6px 14px',
-                          fontSize: '0.84rem',
+                          flexShrink: 0,
+                          padding: '6px 12px',
+                          fontSize: '0.8rem',
                           fontWeight: 700,
                           color: 'var(--accent-cyan)',
-                          borderColor: 'rgba(0, 240, 255, 0.3)',
-                          cursor: 'pointer'
+                          borderColor: 'rgba(0, 240, 255, 0.35)',
+                          background: 'rgba(0, 240, 255, 0.06)',
+                          cursor: 'pointer',
+                          whiteSpace: 'nowrap'
                         }}
                       >
                         Read Analysis →

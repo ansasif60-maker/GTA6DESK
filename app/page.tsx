@@ -230,18 +230,24 @@ export default function HomePage() {
 
             <div className="story-grid-three">
               {previewArticles.map((art) => (
-                <div key={art.id} className="story-card">
-                  <div className="story-card-body">
-                    <span className="badge-category lore" style={{ fontSize: '0.7rem', width: 'fit-content' }}>
-                      {art.clusterName}
-                    </span>
-                    <h3 className="story-title">
-                      <Link href={`/news?article=${art.id}`}>{art.title}</Link>
+                <div key={art.id} className="story-card" style={{ overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                  <div className="story-card-body" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                    <div style={{ minHeight: '26px', marginBottom: '8px' }}>
+                      <span className="badge-category lore" style={{ fontSize: '0.7rem', width: 'fit-content' }}>
+                        {art.clusterName}
+                      </span>
+                    </div>
+                    <h3 className="story-title" style={{ height: '3.2rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      <Link href={`/news?article=${art.id}`} title={art.title}>{art.title}</Link>
                     </h3>
-                    <p className="story-excerpt">{art.leadParagraph}</p>
-                    <Link href={`/news?article=${art.id}`} style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--accent-cyan)' }}>
-                      Read Analysis →
-                    </Link>
+                    <p className="story-excerpt" style={{ height: '4.6rem', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden', textOverflow: 'ellipsis', marginBottom: '16px' }}>
+                      {art.leadParagraph}
+                    </p>
+                    <div style={{ marginTop: 'auto', paddingTop: '12px', borderTop: '1px solid var(--border-subtle)' }}>
+                      <Link href={`/news?article=${art.id}`} className="btn btn-ghost" style={{ padding: '6px 14px', fontSize: '0.82rem', fontWeight: 700, color: 'var(--accent-cyan)', borderColor: 'rgba(0, 240, 255, 0.35)', background: 'rgba(0, 240, 255, 0.06)', display: 'inline-flex' }}>
+                        Read Analysis →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
