@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "cluster": 1,
+    "clusterName": "Release Window & Institutional Governance",
+    "title": "GTA 6 Official Release Window & Timeline Master Matrix",
+    "targetKeyword": "gta 6 release date",
+    "eav": {
+      "entity": "GTA VI",
+      "attribute": "Release Window",
+      "value": "Fall 2025"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI is officially scheduled for launch in Fall 2025 on PlayStation 5 and Xbox Series X/S, as confirmed by Take-Two Interactive in its quarterly earnings reports. This launch window establishes the next major entry in the franchise following more than a decade of development.",
+    "tokenChunk": "Take-Two Interactive Software, Inc. (NASDAQ: TTWO) has reaffirmed that Grand Theft Auto VI is scheduled for launch in calendar Fall 2025. The publication timeline was reiterated across consecutive SEC Form 8-K disclosures and investor earnings calls. The title will deploy exclusively on ninth-generation console platforms—PlayStation 5 and Xbox Series X/S—with a PC platform release scheduled post-launch. Historical development cadences suggest an intense six-month pre-launch marketing campaign starting late Spring 2025."
+  },
+  {
+    "id": 2,
+    "cluster": 1,
+    "clusterName": "Release Window & Institutional Governance",
+    "title": "Take-Two Interactive Earnings Call Breakdown: GTA VI Guidance Analysis",
+    "targetKeyword": "take two earnings gta 6",
+    "eav": {
+      "entity": "Take-Two Interactive",
+      "attribute": "Net Bookings Projection",
+      "value": "$8 Billion Target"
+    },
+    "wikidata": "Q94933",
+    "leadParagraph": "Take-Two Interactive's fiscal guidance targets unprecedented Net Bookings growth driven by the launch of Grand Theft Auto VI. Financial filings indicate high revenue expectations across initial unit sales and ongoing live-service integration.",
+    "tokenChunk": "In Take-Two Interactive's recent SEC Form 10-Q filings, management maintained revenue and Net Bookings guidance pointing to an unprecedented inflection point in Fiscal 2026. Projections indicate Net Bookings exceeding $8.0 billion, fueled largely by initial retail sales of GTA VI alongside continued recurring consumer spend across GTA Online. Wall Street consensus predicts first-year physical and digital sales surpassing 35 to 40 million units worldwide, generating over $2.5 billion in gross retail receipts within the initial 48 hours."
+  },
+  {
+    "id": 3,
+    "cluster": 1,
+    "clusterName": "Release Window & Institutional Governance",
+    "title": "GTA 6 Platforms Analysis: PS5, Xbox Series X/S & PC Delay Roadmap",
+    "targetKeyword": "gta 6 platforms pc release",
+    "eav": {
+      "entity": "GTA VI PC Version",
+      "attribute": "Launch Delay",
+      "value": "12-18 Months Post-Console"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI will launch exclusively on PlayStation 5 and Xbox Series X/S at release, following Rockstar Games' historical staggered platform deployment strategy. A personal computer edition is projected to follow subsequent to the initial console window.",
+    "tokenChunk": "Rockstar Games historically utilizes a multi-wave platform release strategy. Grand Theft Auto IV, Grand Theft Auto V, and Red Dead Redemption 2 each arrived on consoles first, with Windows PC editions releasing between 8 and 18 months afterward. Technical disclosures suggest this delay permits the team to engineer targeted low-level rendering optimizations for complex multi-vendor PC hardware architectures (DirectX 12 Ultimate, Vulkan) while maximizing initial console retail margins."
+  },
+  {
+    "id": 4,
+    "cluster": 1,
+    "clusterName": "Release Window & Institutional Governance",
+    "title": "PS5 Pro Enhanced Features for GTA 6: Technical Expectation Engine",
+    "targetKeyword": "gta 6 ps5 pro enhanced",
+    "eav": {
+      "entity": "PS5 Pro",
+      "attribute": "Rendering Mode Target",
+      "value": "Dynamic 4K / 60 FPS PSSR"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI is projected to utilize the PlayStation 5 Pro hardware capabilities to deliver enhanced ray-traced reflections and higher visual fidelity. PlayStation Spectral Super Resolution (PSSR) will serve as a primary upscaling pipeline.",
+    "tokenChunk": "The PlayStation 5 Pro hardware architecture provides a 67% compute unit expansion and advanced custom machine learning hardware for PlayStation Spectral Super Resolution (PSSR). For GTA VI, this enables Rockstar's RAGE 9 engine to run hardware-accelerated ray-traced reflections and global illumination simultaneously while targeting 60 frames per second at reconstructed 4K display output, eliminating the traditional fidelity versus performance compromise."
+  },
+  {
+    "id": 5,
+    "cluster": 1,
+    "clusterName": "Release Window & Institutional Governance",
+    "title": "GTA 6 Physical vs Digital Pre-Order Editions & Collector Breakdown",
+    "targetKeyword": "gta 6 pre order bonus collector edition",
+    "eav": {
+      "entity": "Pre-Order Bundle",
+      "attribute": "Tier Distribution",
+      "value": "Standard, Deluxe, Collector"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Pre-order packages for Grand Theft Auto VI are structured across multiple retail tiers offering early digital incentives and physical collectibles. Distribution spans both direct-to-consumer digital storefronts and global physical retailers.",
+    "tokenChunk": "Industry retail telemetry points to a three-tier pre-order architecture: Standard ($69.99), Special/Deluxe Edition ($89.99 - including in-game garage assets, currency packs, and weapon skins), and a Collector's Vault Edition ($149.99+ - featuring a physical steelbook, embroidered Leonida Vice Keys map blueprint, and serialized challenge coin)."
+  },
+  {
+    "id": 6,
+    "cluster": 1,
+    "clusterName": "Release Window & Institutional Governance",
+    "title": "Rockstar Games Development History: From Project Americas to Launch",
+    "targetKeyword": "gta 6 development history project americas",
+    "eav": {
+      "entity": "GTA VI Development",
+      "attribute": "Internal Codename",
+      "value": "Project Americas"
+    },
+    "wikidata": "Q94887",
+    "leadParagraph": "Development on Grand Theft Auto VI, internally designated as Project Americas, represents the largest production footprint in Rockstar Games history. Initial scope expansion evolved into a focused narrative setting within the state of Leonida.",
+    "tokenChunk": "Originally conceived under the codename 'Project Americas' with ambitious plans to simulate multiple South American territories and North American regions, Rockstar Games restructured the scope around 2020. The production consolidated all global studio resources (Rockstar North, San Diego, Toronto, New England, India) to deliver the state of Leonida with unprecedented environmental interior density."
+  },
+  {
+    "id": 7,
+    "cluster": 1,
+    "clusterName": "Release Window & Institutional Governance",
+    "title": "GTA 6 Age Rating & Content Classification Database (ESRB/PEGI)",
+    "targetKeyword": "gta 6 esrb rating age restriction",
+    "eav": {
+      "entity": "GTA VI",
+      "attribute": "ESRB Rating",
+      "value": "Mature 17+ (M)"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI carries an ESRB Mature 17+ rating and PEGI 18 rating due to intense violence, adult content, drug references, and strong language. Official rating details outline the exact compliance parameters across global regions.",
+    "tokenChunk": "Rating filings across the ESRB (North America), PEGI (Europe), and Australian Classification Board detail content descriptors including Intense Violence, Blood and Gore, Sexual Themes, Nudity, Strong Language, and In-Game Purchases. These classifications enforce global compliance standards while confirming the mature satirical narrative tone."
+  },
+  {
+    "id": 8,
+    "cluster": 2,
+    "clusterName": "Trailers, Narrative Arc & Characters",
+    "title": "Trailer 1 Frame-by-Frame Technical & Narrative Breakdown",
+    "targetKeyword": "gta 6 trailer 1 analysis",
+    "eav": {
+      "entity": "Trailer 1",
+      "attribute": "View Count Record",
+      "value": "93M+ in 24 Hours"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "The debut trailer for Grand Theft Auto VI established the setting of Vice City and Introduced primary protagonists Lucia and Jason. Frame-by-frame analysis reveals dense NPC populations, dynamic weather systems, and social media integration.",
+    "tokenChunk": "Trailer 1 established multiple world records, achieving 93 million organic YouTube views within 24 hours. The 91-second video unveiled over 50 distinct locations across Vice City, Port Gellhorn, and the Keys. Photogrammetric analysis confirms dynamic cloth physics, individual hair strand simulation, and advanced subsurface scattering across diverse character models."
+  },
+  {
+    "id": 9,
+    "cluster": 2,
+    "clusterName": "Trailers, Narrative Arc & Characters",
+    "title": "Lucia Character Profile: Background, Dual-Protagonist Dynamics & Lore",
+    "targetKeyword": "gta 6 lucia protagonist",
+    "eav": {
+      "entity": "Lucia",
+      "attribute": "Protagonist Role",
+      "value": "First Female Lead (3D Era)"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Lucia serves as one half of Grand Theft Auto VI's central criminal duo, representing the franchise's first female playable protagonist in the modern era. Her narrative arc initiates within the Leonardida state correctional facility network.",
+    "tokenChunk": "Lucia represents the first female playable lead in Rockstar's 3D/HD era. The opening scenes depict her wearing a correctional uniform at the Leonida State Department of Corrections. Her partnership with Jason forms a modern Bonnie-and-Clyde criminal dynamic centered on high-risk robberies, liquor store holdups, and systemic organized crime syndicates."
+  },
+  {
+    "id": 10,
+    "cluster": 2,
+    "clusterName": "Trailers, Narrative Arc & Characters",
+    "title": "Jason Character Profile: Weapons Expertise, Backstory & System Mechanics",
+    "targetKeyword": "gta 6 jason protagonist",
+    "eav": {
+      "entity": "Jason",
+      "attribute": "Protagonist Role",
+      "value": "Co-Lead Dual Mechanic"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Jason operates as the co-lead character alongside Lucia, forming a Bonnie and Clyde-inspired criminal dynamic across Vice City. Character mechanics emphasize tactical coordination, vehicle handling, and specialized weapon interaction.",
+    "tokenChunk": "Jason's character systems emphasize tactical combat discipline, evasive driving, and mechanical modifications. Players switch seamlessly between Jason and Lucia during free-roam and missions, executing coordinated dual-operative flanking maneuvers during bank and jewelry store heists."
+  },
+  {
+    "id": 11,
+    "cluster": 2,
+    "clusterName": "Trailers, Narrative Arc & Characters",
+    "title": "State of Leonida Narrative Setting: Lore, Parodies & World Design",
+    "targetKeyword": "gta 6 state of leonida",
+    "eav": {
+      "entity": "State of Leonida",
+      "attribute": "Geographical Basis",
+      "value": "Florida, United States"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "The fictional state of Leonida serves as the broader geographic container for Grand Theft Auto VI, reimagining modern Florida society. The setting incorporates satirical representations of social media culture, regional wildlife, and urban expansion.",
+    "tokenChunk": "Leonida is Rockstar's satirical mirror of Florida, featuring parody brands, eccentric viral personalities, and hyper-polarized social discourse. World zones range from hyper-affluent beachfront strips with multimillion-dollar villas to neglected trailer parks and dense swamplands populated by alligators."
+  },
+  {
+    "id": 12,
+    "cluster": 2,
+    "clusterName": "Trailers, Narrative Arc & Characters",
+    "title": "Vice City Real-World Comparative Analysis: 2002 vs 2025 Architecture",
+    "targetKeyword": "gta 6 vice city map changes",
+    "eav": {
+      "entity": "Vice City (2025)",
+      "attribute": "Structural Expansion",
+      "value": "Multi-County Metro Area"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Vice City in Grand Theft Auto VI expands the classic 1980s location into a modern metropolitan region. Architectural updates replace legacy low-polygon structures with dense urban corridors, expansive beach environments, and detailed interior spaces.",
+    "tokenChunk": "The 2002 rendition of Vice City spanned roughly 5.6 square kilometers with rigid low-polygon geometry. The 2025 Leonida metropolis reimagines the city into a sprawling multi-county urban sprawl incorporating Miami Beach (Ocean Drive), Wynwood (graffiti arts district), Brickell (banking towers), and Key West."
+  },
+  {
+    "id": 13,
+    "cluster": 2,
+    "clusterName": "Trailers, Narrative Arc & Characters",
+    "title": "Social Media & In-Game Smartphone Ecosystem Specifications",
+    "targetKeyword": "gta 6 in game social media TikTok app",
+    "eav": {
+      "entity": "In-Game Social Network",
+      "attribute": "Media Format",
+      "value": "Vertical Short-Form Video Engine"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI integrates an in-game vertical short-form video network that reflects real-time player actions and world events. This social engine acts as a secondary narrative delivery system and world-building component.",
+    "tokenChunk": "GTA VI features a parody vertical video social network mimicking TikTok and Instagram Reels. World NPCs stream live events, street takeovers, police chases, and nightclub parties. If the player causes a public disturbance, witness videos appear on the feed in near real-time, influencing regional police alert levels."
+  },
+  {
+    "id": 14,
+    "cluster": 2,
+    "clusterName": "Trailers, Narrative Arc & Characters",
+    "title": "GTA 6 Main Story Mission Architecture & Dynamic Heist Mechanics",
+    "targetKeyword": "gta 6 heist missions dynamic gameplay",
+    "eav": {
+      "entity": "Mission Engine",
+      "attribute": "Event Structure",
+      "value": "Dynamic Procedural Opportunities"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Main story missions in Grand Theft Auto VI transition from linear scripts toward dynamic event triggers and emergent heist opportunities. Players execute strategic robberies using flexible entry strategies and real-time partner commands.",
+    "tokenChunk": "Moving beyond scripted checkpoints, GTA VI missions support dynamic tactical freedom. Players choose recon methods, entry breach tools, and partner roles. Non-scripted environmental accidents (power grid blackouts, traffic pileups) dynamically divert police response routes."
+  },
+  {
+    "id": 15,
+    "cluster": 3,
+    "clusterName": "Cartography & World Engine",
+    "title": "Grand Vice City Master Map Scale & Square Mileage Calculation",
+    "targetKeyword": "gta 6 map size comparison",
+    "eav": {
+      "entity": "Leonida Map Size",
+      "attribute": "Landmass Scale",
+      "value": "~2.5x GTA V Map Area"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Spatial mapping analyses indicate that the state of Leonida offers a landmass roughly 2.5 times larger than Grand Theft Auto V's Los Santos. Measurement projections synthesize trailer telemetry, roadway signage, and terrain spatial data.",
+    "tokenChunk": "Community cartography synthesis projects the total accessible landmass of Leonida at approximately 125 to 135 square kilometers—more than 2.5 times larger than GTA V's 48 square kilometer Los Santos map. The map features multiple distinct mountainless drainage basins, expansive interconnected canal networks, and vast ocean waters."
+  },
+  {
+    "id": 16,
+    "cluster": 3,
+    "clusterName": "Cartography & World Engine",
+    "title": "Kelly County & Suburbs Sector Analysis",
+    "targetKeyword": "gta 6 kelly county map",
+    "eav": {
+      "entity": "Kelly County",
+      "attribute": "Region Type",
+      "value": "Suburban & Industrial Corridor"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Kelly County forms a key administrative region surrounding Vice City, comprising suburban residential developments and light industrial zones. The area acts as a transitional sector between urban center density and rural expanses.",
+    "tokenChunk": "Kelly County represents the suburban underbelly of Leonida, packed with strip malls, mega-distribution warehouses, auto-body repair shops, and low-density tract housing. It serves as an early-game staging territory for weapon drops and illicit trade."
+  },
+  {
+    "id": 17,
+    "cluster": 3,
+    "clusterName": "Cartography & World Engine",
+    "title": "Vice Dale & Port Gellhorn Region Deep Dive",
+    "targetKeyword": "gta 6 port gellhorn",
+    "eav": {
+      "entity": "Port Gellhorn",
+      "attribute": "Infrastructure Focus",
+      "value": "Industrial Port & Race Track Facilities"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Port Gellhorn represents a major economic and logistics hub in western Leonida, featuring expansive industrial port facilities, strip malls, and motorsport venues. The district hosts specific criminal supply chain encounters.",
+    "tokenChunk": "Located along the western coastline, Port Gellhorn serves as the industrial shipping capital of Leonida. It houses container terminals, oil refineries, a dirt speedway track, and neglected motel strips reminiscent of Florida's Panhandle industrial towns."
+  },
+  {
+    "id": 18,
+    "cluster": 3,
+    "clusterName": "Cartography & World Engine",
+    "title": "The Keys & Archipelago Navigation Guide",
+    "targetKeyword": "gta 6 keys islands map",
+    "eav": {
+      "entity": "Vice Keys",
+      "attribute": "Geographical Feature",
+      "value": "Island Chain Highway System"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "The Vice Keys form an island chain connected by elevated highways spanning the southern quadrant of the map. Navigation requires aquatic craft or high-speed highway transit across vulnerable water crossings.",
+    "tokenChunk": "Stretching across the southern ocean, the Vice Keys feature elevated two-lane bridges connecting small coral keys, luxury marinas, fishing shanties, and tourist dive shops. Narrow bridges make police pursuit evasion high-risk and tactical."
+  },
+  {
+    "id": 19,
+    "cluster": 3,
+    "clusterName": "Cartography & World Engine",
+    "title": "Grassrivers & Everglades Wildlife Biome Mapping",
+    "targetKeyword": "gta 6 everglades grassrivers map",
+    "eav": {
+      "entity": "Grassrivers",
+      "attribute": "Environmental Biome",
+      "value": "Wetland & Wildlife Reserve"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "The Grassrivers biome reproduces the Florida Everglades, introducing dangerous marshland environments populated by territorial fauna. Special airboat transportation and specialized gear are necessary for navigation.",
+    "tokenChunk": "The Grassrivers wetland ecosystem introduces hazardous muddy terrain and thick mangrove vegetation. Player movement requires fan-powered airboats or lifted 4x4 trucks. Fauna includes American alligators, wild boars, panthers, and invasive pythons."
+  },
+  {
+    "id": 20,
+    "cluster": 3,
+    "clusterName": "Cartography & World Engine",
+    "title": "Enterable Buildings & Interior Density Percentage Analysis",
+    "targetKeyword": "gta 6 enterable buildings list",
+    "eav": {
+      "entity": "Interior Infrastructure",
+      "attribute": "Accessible Interior Ratio",
+      "value": "Estimated 15-20% Of Structures"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI increases structural accessibility, allowing players to enter a high percentage of commercial and residential buildings. Interior spaces include gas stations, nightclubs, pawn shops, and residential complexes.",
+    "tokenChunk": "Rockstar has heavily expanded seamless interior accessibility. Between 15% and 20% of all structures feature fully modeled interiors, including laundromats, convenience marts, gun shops, motel rooms, diners, and police stations, eliminating loading screens completely."
+  },
+  {
+    "id": 21,
+    "cluster": 3,
+    "clusterName": "Cartography & World Engine",
+    "title": "Fast Travel, Metro & Transit Network Operations",
+    "targetKeyword": "gta 6 fast travel train metro system",
+    "eav": {
+      "entity": "Vice City Metro",
+      "attribute": "Public Transit Type",
+      "value": "Automated Heavy Rail & Bus Routes"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Public transit networks in Vice City feature automated heavy rail systems and bus routes that serve as immersive fast-travel mechanisms. Players can board transit lines to seamlessly bypass high-density traffic corridors.",
+    "tokenChunk": "The Vice City Elevated Transit (VCET) runs overhead through downtown corridors. Players can board trains in real-time or trigger instant fast-travel tickets between stations, providing tactical escape options during high-wanted-level pursuits."
+  },
+  {
+    "id": 22,
+    "cluster": 4,
+    "clusterName": "Armory & Ballistics",
+    "title": "GTA 6 Weapon Inventory Mechanics: The Ditch-The-Duffel System",
+    "targetKeyword": "gta 6 weapon wheel inventory system",
+    "eav": {
+      "entity": "Inventory System",
+      "attribute": "Carrying Capacity",
+      "value": "Physical Weapon Limits (Duffel/Trunk)"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI transitions from an infinite weapon wheel to a visible equipment system where inventory is constrained by physical carrying limits. Additional firearms must be stowed in vehicle trunks or shoulder bags.",
+    "tokenChunk": "Adopting the physical weapon philosophy first seen in Red Dead Redemption 2, GTA VI restricts on-person inventory to two concealed sidearms, one long rifle on a sling, and throwables. Heavy armaments must be retrieved from vehicle trunks or duffel bags."
+  },
+  {
+    "id": 23,
+    "cluster": 4,
+    "clusterName": "Armory & Ballistics",
+    "title": "Handguns & Sidearms Catalog: Stats, Attachments & Upgrades",
+    "targetKeyword": "gta 6 pistols handguns list",
+    "eav": {
+      "entity": "Sidearm Category",
+      "attribute": "Customization Depth",
+      "value": "Muzzle, Sight, Grip, Magazine Upgrades"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "The sidearm catalog in Grand Theft Auto VI spans semi-automatic pistols, heavy revolvers, and suppressed handguns tailored for close-quarters engagements. Modular upgrades allow customization of barrel attachments, optics, and magazine capacities.",
+    "tokenChunk": "Sidearms feature modular rail systems allowing suppressor mounting, red-dot reflex optics, extended magazines, and match-grade triggers. Notable models include polymer 9mm service pistols, subcompact carry pieces, and high-caliber .44 magnum revolvers."
+  },
+  {
+    "id": 24,
+    "cluster": 4,
+    "clusterName": "Armory & Ballistics",
+    "title": "Long Rifles, Carbines & Assault Rifles Tactical Data Sheet",
+    "targetKeyword": "gta 6 assault rifles list",
+    "eav": {
+      "entity": "Assault Rifle Class",
+      "attribute": "Engagement Range",
+      "value": "Medium-to-Long Tactical Distance"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Assault rifles in Grand Theft Auto VI deliver sustained firepower and tactical versatility across medium and long-range combat scenarios. Weapons support modular rail systems for optics, laser sights, and under-barrel attachments.",
+    "tokenChunk": "The primary rifle class includes 5.56mm carbines and 7.62mm heavy battle rifles. Ballistic telemetry features variable muzzle velocities, recoil patterns, and semi-to-burst fire selector switches."
+  },
+  {
+    "id": 25,
+    "cluster": 4,
+    "clusterName": "Armory & Ballistics",
+    "title": "Ballistics Engine, Bullet Penetration & Dynamic Damage Physics",
+    "targetKeyword": "gta 6 ballistics bullet damage physics",
+    "eav": {
+      "entity": "Physics Engine",
+      "attribute": "Destruction Capability",
+      "value": "Material-Based Penetration Curves"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "The ballistics engine features dynamic material penetration models where caliber determines bullet passthrough across drywall, metal, wood, and glass. Armor penetration mechanics directly affect combat strategies.",
+    "tokenChunk": "RAGE 9 introduces real-time material density calculation: 9mm rounds penetrate interior drywall but deflect off car doors; 7.62mm AP rounds punch cleanly through concrete cinder blocks, vehicle engine blocks, and laminated glass."
+  },
+  {
+    "id": 26,
+    "cluster": 4,
+    "clusterName": "Armory & Ballistics",
+    "title": "Melee Combat Engine, Grappling & Non-Lethal Takedowns",
+    "targetKeyword": "gta 6 melee combat mechanics",
+    "eav": {
+      "entity": "Melee Mechanics",
+      "attribute": "Control Options",
+      "value": "Grapple, Dodge, Counter, Non-Lethal Restraints"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Melee combat incorporates expanded hand-to-hand systems including active dodging, dynamic counters, directional grapples, and non-lethal incapacitation techniques. Environmental objects can be dynamically weaponized during brawls.",
+    "tokenChunk": "Players can perform contextual environmental takedowns—slamming opponents into counters, throwing glass bottles, or pinning targets using zip-ties for silent stealth heists."
+  },
+  {
+    "id": 27,
+    "cluster": 4,
+    "clusterName": "Armory & Ballistics",
+    "title": "Explosives, Throwable Ordnance & Heavy Weaponry Breakdown",
+    "targetKeyword": "gta 6 RPG explosives list",
+    "eav": {
+      "entity": "Heavy Ordnance",
+      "attribute": "Structural Impact",
+      "value": "High-Yield Environmental Blast Radius"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Explosive assets encompass remote charges, fragment grenades, launchable rockets, and heavy anti-vehicle armaments. Detonation mechanics cause localized structural destruction and dynamic fires.",
+    "tokenChunk": "Heavy ordnance includes thermite breaching charges, RPG-7 launchers, and throwable flashbangs with volumetric smoke diffusion that blinds enemies and obscures thermal vision."
+  },
+  {
+    "id": 28,
+    "cluster": 5,
+    "clusterName": "Vehicle Fleet & Handling Physics",
+    "title": "Vehicle Handling Physics: Deformable Body & Suspension Engine",
+    "targetKeyword": "gta 6 vehicle physics car handling",
+    "eav": {
+      "entity": "Vehicle Physics Engine",
+      "attribute": "Simulation Depth",
+      "value": "Real-Time Tire Deformation & Suspension Tuning"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Vehicle handling mechanics balance accessible arcade controls with complex suspension, tire traction, and mass deformation physics. Impact dynamics produce localized structural damage affecting handling and engine performance.",
+    "tokenChunk": "The vehicle physics engine introduces independent four-corner suspension travel, real-time tire pressure deformation, and progressive chassis crumple zones that deform authentically without clipping wheels."
+  },
+  {
+    "id": 29,
+    "cluster": 5,
+    "clusterName": "Vehicle Fleet & Handling Physics",
+    "title": "Supercars & Exotic Fleet Catalog: Real-World Counterparts Index",
+    "targetKeyword": "gta 6 supercars list",
+    "eav": {
+      "entity": "Exotic Vehicle Fleet",
+      "attribute": "Design Origin",
+      "value": "Licensed-Inspired Custom Designs"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "The exotic vehicle tier features high-performance supercars inspired by modern European and American hypercars. Detailed interiors include working digital dashes, adjustable drive modes, and functional aerodynamic components.",
+    "tokenChunk": "Includes the Grotti Cheetah Classic (Ferrari Testarossa), Pegassi Zorrusso (Italdesign Zerouno), Pfister Comet S2 (Porsche 911 GT3), and Overflod Zeno. Features functional active aero wings and variable launch control."
+  },
+  {
+    "id": 30,
+    "cluster": 5,
+    "clusterName": "Vehicle Fleet & Handling Physics",
+    "title": "Everyday Civilian Traffic & Commercial Vehicles Database",
+    "targetKeyword": "gta 6 civilian cars list",
+    "eav": {
+      "entity": "Commercial Traffic Fleet",
+      "attribute": "Traffic Density Scale",
+      "value": "Contextual Time-of-Day Traffic Spawns"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Civilian traffic encompasses everyday sedans, SUVs, pickup trucks, and commercial transport units tailored to specific districts. Density parameters fluctuate realistically based on time-of-day cycles and weather events.",
+    "tokenChunk": "From box trucks and city buses to lifted dual-cab pickups in rural areas and luxury sedans in downtown financial sectors, traffic behavior models realistic driver hesitation and lane merging."
+  },
+  {
+    "id": 31,
+    "cluster": 5,
+    "clusterName": "Vehicle Fleet & Handling Physics",
+    "title": "Aquatic Craft, Yachts & Speedboats Technical Registry",
+    "targetKeyword": "gta 6 boats jetski speedboats",
+    "eav": {
+      "entity": "Marine Fleet",
+      "attribute": "Wave Interaction",
+      "value": "Dynamic Hydrodynamic Hull Physics"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Aquatic navigation options range from personal watercraft and high-speed offshore racing boats to luxury motor yachts. Marine displacement physics respond directly to dynamic ocean swells and weather conditions.",
+    "tokenChunk": "Features offshore cigarette speedboats, hovercrafts, airboats, and 120-foot multi-deck superyachts with driveable tenders and helipads."
+  },
+  {
+    "id": 32,
+    "cluster": 5,
+    "clusterName": "Vehicle Fleet & Handling Physics",
+    "title": "Aviation Fleet: Helicopters, Fixed-Wing Aircraft & Flight Controls",
+    "targetKeyword": "gta 6 planes helicopters list",
+    "eav": {
+      "entity": "Aviation Assets",
+      "attribute": "Flight Model",
+      "value": "Wind-Turbulence Sensitive Dynamics"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Aircraft options comprise private jets, stunt planes, commercial transports, and utility helicopters. The flight engine incorporates crosswind resistance, air density variations, and detailed control surfaces.",
+    "tokenChunk": "Aerodynamic simulation accounts for rotor downwash, thermal updrafts over heated asphalt, and coastal storm turbulence."
+  },
+  {
+    "id": 33,
+    "cluster": 5,
+    "clusterName": "Vehicle Fleet & Handling Physics",
+    "title": "Customization Mechanics: Performance Upgrades & Visual Tuning",
+    "targetKeyword": "gta 6 car tuning customization",
+    "eav": {
+      "entity": "Tuning Shops",
+      "attribute": "Modification Options",
+      "value": "ECU Tuning, Camber, Body Kits, Audio Systems"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Vehicle modification networks deliver extensive performance and visual tuning options ranging from engine calibration to custom exhaust notes. Visual alterations affect aerodynamics and vehicle mass distribution.",
+    "tokenChunk": "Underground tuning garages in Port Gellhorn and Vice Beach offer widebody fenders, wheel offsets, suspension stiffness sliders, and custom interior lighting."
+  },
+  {
+    "id": 34,
+    "cluster": 6,
+    "clusterName": "Hardware, Engine Tech & Benchmarks",
+    "title": "PC Hardware System Requirements Matrix: Minimum vs Recommended",
+    "targetKeyword": "gta 6 pc system requirements",
+    "eav": {
+      "entity": "System Specs",
+      "attribute": "Minimum Target",
+      "value": "Core i5-10400 / RTX 2060 / 16GB RAM"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Hardware benchmarks indicate that minimum system configurations target 1080p rendering at 30 FPS, requiring modern multi-core processors and mid-range GPUs. Solid-state storage (SSD) is mandatory across all tiers for dynamic asset streaming.",
+    "tokenChunk": "Minimum specs: Intel Core i5-10400F / AMD Ryzen 5 3600, 16 GB DDR4 RAM, NVIDIA GeForce RTX 2060 (6GB) / AMD Radeon RX 5700. Recommended (1440p 60FPS): Intel Core i7-13700K / Ryzen 7 7800X3D, 32 GB DDR5 RAM, NVIDIA RTX 4070 Super (12GB)."
+  },
+  {
+    "id": 35,
+    "cluster": 6,
+    "clusterName": "Hardware, Engine Tech & Benchmarks",
+    "title": "RAGE Engine 9 Technical Features Analysis: Ray Tracing & Water Simulation",
+    "targetKeyword": "gta 6 graphics engine rage 9",
+    "eav": {
+      "entity": "RAGE 9 Engine",
+      "attribute": "Core Feature",
+      "value": "Real-Time Global Illumination & Hydrodynamics"
+    },
+    "wikidata": "Q94887",
+    "leadParagraph": "Rockstar Advanced Game Engine (RAGE 9) introduces advanced real-time ray-traced global illumination, volumetric fog, and complex water surface physics. Dynamic lighting systems recalculate bounce light across changing weather conditions.",
+    "tokenChunk": "RAGE 9 features a unified physical lighting model incorporating ray-traced ambient occlusion, screen-space subsurface scattering for human skin, and fluid hydrodynamic simulation for river currents and breaking beach surf."
+  },
+  {
+    "id": 36,
+    "cluster": 6,
+    "clusterName": "Hardware, Engine Tech & Benchmarks",
+    "title": "Console Graphics Modes Comparison: PS5 vs Xbox Series X",
+    "targetKeyword": "gta 6 ps5 vs xbox series x graphics",
+    "eav": {
+      "entity": "Console Specs",
+      "attribute": "Performance Targets",
+      "value": "Quality Mode (4K/30) / Performance Mode (Dynamic 4K/60)"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "PlayStation 5 and Xbox Series X platforms offer target visual profiles dividing 4K fidelity modes from high-framerate dynamic resolution modes. Comparative analyses show subtle rendering variations across shadow resolution and draw distance metrics.",
+    "tokenChunk": "Fidelity Mode targets native 4K with full hardware ray-traced reflections and dense crowd simulation at 30 FPS. Performance Mode dynamically scales resolution between 1440p and reconstructed 4K using temporal injection to maintain 60 FPS."
+  },
+  {
+    "id": 37,
+    "cluster": 6,
+    "clusterName": "Hardware, Engine Tech & Benchmarks",
+    "title": "4K Ultra 60FPS PC Hardware Build Guide & Component Selection",
+    "targetKeyword": "gta 6 pc build guide 4k 60fps",
+    "eav": {
+      "entity": "4K Rig Specification",
+      "attribute": "Recommended GPU",
+      "value": "NVIDIA RTX 4080 Super / AMD RX 7900 XTX"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Achieving native 4K rendering at 60 frames per second requires current-generation graphics cards paired with high-speed DDR5 memory architecture. Strategic component selection focuses on thermal management and PCI Express bandwidth.",
+    "tokenChunk": "For uncompromising 4K Ultra 60FPS+ with max ray tracing, the recommended baseline is an NVIDIA GeForce RTX 4080 Super or RTX 4090, 64 GB DDR5-6000 RAM, and a PCIe 4.0 NVMe SSD capable of 7000 MB/s sequential read speeds."
+  },
+  {
+    "id": 38,
+    "cluster": 6,
+    "clusterName": "Hardware, Engine Tech & Benchmarks",
+    "title": "DirectX 12 Ultimate & Vulkan API Rendering Pipeline Deep Dive",
+    "targetKeyword": "gta 6 directx 12 ultimate vulkan",
+    "eav": {
+      "entity": "Rendering API",
+      "attribute": "Low-Level Optimization",
+      "value": "DirectStorage & Mesh Shading Pipeline"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Grand Theft Auto VI leverages DirectX 12 Ultimate low-level APIs to optimize multi-threaded CPU draw calls and GPU workloads. DirectStorage integration accelerates background loading times to eliminate streaming hitches during high-speed travel.",
+    "tokenChunk": "DirectX 12 Ultimate mesh shaders eliminate CPU culling bottlenecks when rendering millions of high-polygon palm trees and dense city crowds simultaneously. DirectStorage 1.2 enables direct GPU asset decompression."
+  },
+  {
+    "id": 39,
+    "cluster": 6,
+    "clusterName": "Hardware, Engine Tech & Benchmarks",
+    "title": "DLSS 3.5, FSR 3 & XeSS Upscaling Performance Benchmarks",
+    "targetKeyword": "gta 6 dlss fsr frame generation",
+    "eav": {
+      "entity": "Upscaling Suite",
+      "attribute": "Frame Generation Support",
+      "value": "DLSS Frame Gen / FSR Fluid Motion Frames"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Temporal upscaling solutions including NVIDIA DLSS 3.5, AMD FSR 3, and Intel XeSS provide significant frame rate improvements via AI frame generation and reconstruction. These pipelines help smooth high-density city areas on mid-tier hardware setups.",
+    "tokenChunk": "NVIDIA Ray Reconstruction (DLSS 3.5) sharpens reflections and replaces traditional denoisers with an AI model trained to recognize Vice City neon light bounces. Frame Generation boosts framerates by 65-80% in CPU-bound urban areas."
+  },
+  {
+    "id": 40,
+    "cluster": 6,
+    "clusterName": "Hardware, Engine Tech & Benchmarks",
+    "title": "Steam Deck, ROG Ally & Handheld PC Optimization Profile",
+    "targetKeyword": "gta 6 steam deck performance",
+    "eav": {
+      "entity": "Portable Gaming Handhelds",
+      "attribute": "Target Performance",
+      "value": "720p/900p Dynamic 30 FPS Profile"
+    },
+    "wikidata": "Q115688534",
+    "leadParagraph": "Handheld gaming PCs run Grand Theft Auto VI by applying custom low-power optimization profiles and aggressive resolution scaling. Tweaked visual settings ensure steady frame pacing while maintaining device battery efficiency.",
+    "tokenChunk": "Targeting 15W TDP profiles on AMD Z1 Extreme and custom APUs, handheld configs utilize 720p/800p internal resolutions upscaled via FSR 3 to achieve a locked 30 FPS console-parity mobile experience."
+  }
+]

@@ -1,3 +1,5 @@
+import articlesJson from './articles.json';
+
 export interface Weapon {
   id: string;
   name: string;
@@ -77,6 +79,13 @@ export interface Article {
   title: string;
   targetKeyword: string;
   leadParagraph: string;
+  eav?: {
+    entity: string;
+    attribute: string;
+    value: string;
+  };
+  wikidata?: string;
+  tokenChunk?: string;
 }
 
 export const WEAPONS: Weapon[] = [
@@ -447,37 +456,4 @@ export const CATEGORIES: CategoryHub[] = [
   }
 ];
 
-export const ARTICLES: Article[] = [
-  {
-    id: 1,
-    cluster: 1,
-    clusterName: "Release Window",
-    title: "GTA 6 Official Release Window & Timeline Master Matrix",
-    targetKeyword: "gta 6 release date",
-    leadParagraph: "Grand Theft Auto VI is officially scheduled for launch in Fall 2025 on PlayStation 5 and Xbox Series X/S, as confirmed by Take-Two Interactive in its quarterly earnings reports."
-  },
-  {
-    id: 2,
-    cluster: 1,
-    clusterName: "Financial & SEC",
-    title: "Take-Two Interactive Earnings Call Breakdown: GTA VI Guidance Analysis",
-    targetKeyword: "take two earnings gta 6",
-    leadParagraph: "Take-Two Interactive's fiscal guidance targets unprecedented Net Bookings growth driven by the launch of Grand Theft Auto VI."
-  },
-  {
-    id: 3,
-    cluster: 2,
-    clusterName: "Characters",
-    title: "Lucia Character Profile: Background, Dual-Protagonist Dynamics & Lore",
-    targetKeyword: "gta 6 lucia protagonist",
-    leadParagraph: "Lucia serves as one half of Grand Theft Auto VI's central criminal duo, representing the franchise's first female playable protagonist in the modern era."
-  },
-  {
-    id: 4,
-    cluster: 3,
-    clusterName: "Cartography",
-    title: "Grand Vice City Master Map Scale & Square Mileage Calculation",
-    targetKeyword: "gta 6 map size comparison",
-    leadParagraph: "Spatial mapping analyses indicate that the state of Leonida offers a landmass roughly 2.5 times larger than Grand Theft Auto V's Los Santos."
-  }
-];
+export const ARTICLES: Article[] = articlesJson as Article[];

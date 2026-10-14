@@ -236,10 +236,10 @@ export default function HomePage() {
                       {art.clusterName}
                     </span>
                     <h3 className="story-title">
-                      <Link href="/news">{art.title}</Link>
+                      <Link href={`/news?article=${art.id}`}>{art.title}</Link>
                     </h3>
                     <p className="story-excerpt">{art.leadParagraph}</p>
-                    <Link href="/news" style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--accent-cyan)' }}>
+                    <Link href={`/news?article=${art.id}`} style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--accent-cyan)' }}>
                       Read Analysis →
                     </Link>
                   </div>
