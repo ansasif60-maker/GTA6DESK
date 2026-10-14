@@ -94,6 +94,33 @@
   font-weight: 500;
 }
 
+.header-logo-desktop {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+.header-logo-mobile {
+  display: none !important;
+  height: 38px;
+  width: 38px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.35);
+}
+
+@media (max-width: 640px) {
+  .header-logo-desktop {
+    display: none !important;
+  }
+  .header-logo-mobile {
+    display: block !important;
+  }
+}
+
 /* Navigation Links */
 .nav-links {
   display: flex;

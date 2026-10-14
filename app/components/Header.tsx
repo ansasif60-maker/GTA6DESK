@@ -17,18 +17,22 @@ export default function Header() {
               transition: 'transform 0.2s ease, filter 0.2s ease'
             }}
           >
+            {/* Desktop & Tablet Header Logo: The second image (Horizontal Retro Vice City Banner) */}
             <img
-              src="/assets/gta6desk_logo.png"
+              src="/assets/gta6desk_header_logo.png"
               alt="GTA 6 DESK"
-              width={42}
-              height={42}
+              className="header-logo-desktop"
               style={{
-                borderRadius: '9px',
-                border: '1px solid rgba(0, 240, 255, 0.45)',
-                boxShadow: '0 0 14px rgba(0, 240, 255, 0.35)',
-                display: 'block',
-                objectFit: 'cover'
+                filter: 'drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6))',
+                transition: 'transform 0.2s ease'
               }}
+            />
+
+            {/* Small Mobile Layout Logo: The first image (Simplified Text-Only Version) */}
+            <img
+              src="/assets/gta6desk_mobile_logo.png"
+              alt="GTA 6 DESK"
+              className="header-logo-mobile"
             />
           </Link>
         </div>
