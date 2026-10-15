@@ -103,7 +103,7 @@ export default function Countdown() {
             </h2>
           </div>
           <div style={{ fontSize: '0.88rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-            Target: PlayStation 5 &amp; Xbox Series X|S
+            Live Launch Console
           </div>
         </div>
 
@@ -128,7 +128,7 @@ export default function Countdown() {
 
         <div className="countdown-footer">
           <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-            Official release date target: <strong>November 19, 2026</strong> (Fall 2026) for PlayStation 5 and Xbox Series X|S.
+            Synchronized to Take-Two Interactive commercial release guidance for PS5 and Xbox Series X|S.
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <button
