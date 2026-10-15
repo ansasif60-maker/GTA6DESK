@@ -90,12 +90,12 @@ export default function HomePage() {
     <>
       <Header />
 
-      <main style={{ minHeight: '80vh', paddingBottom: 'var(--space-3xl)', background: 'var(--bg-base)' }}>
+      <main style={{ minHeight: '80vh', paddingBottom: 'var(--space-3xl)', background: 'transparent' }}>
         {/* Minimalist Rockstar-Style Hero */}
         <section style={{
           position: 'relative',
           padding: '56px 0 36px',
-          background: 'radial-gradient(ellipse at 50% -20%, rgba(255, 0, 122, 0.22) 0%, rgba(0, 240, 255, 0.08) 45%, transparent 75%), var(--bg-base)',
+          background: 'radial-gradient(ellipse at 50% -20%, rgba(255, 0, 122, 0.22) 0%, rgba(0, 240, 255, 0.08) 45%, transparent 75%)',
           borderBottom: '1px solid var(--border-subtle)',
           textAlign: 'center'
         }}>
@@ -233,23 +233,25 @@ export default function HomePage() {
                       position: 'relative',
                       borderRadius: 'var(--radius-lg)',
                       overflow: 'hidden',
-                      background: 'var(--bg-surface)',
-                      border: '1px solid var(--border-subtle)',
+                      background: 'var(--bg-card)',
+                      border: '1px solid var(--border-card)',
                       aspectRatio: '16 / 10',
-                      boxShadow: 'var(--shadow-sm)',
+                      boxShadow: 'var(--shadow-card)',
+                      backdropFilter: 'blur(16px)',
+                      WebkitBackdropFilter: 'blur(16px)',
                       transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = 'translateY(-4px)';
-                      e.currentTarget.style.borderColor = 'rgba(0, 240, 255, 0.45)';
-                      e.currentTarget.style.boxShadow = '0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.15)';
+                      e.currentTarget.style.borderColor = 'rgba(0, 240, 255, 0.55)';
+                      e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
                       const img = e.currentTarget.querySelector('img');
                       if (img) img.style.transform = 'scale(1.06)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.borderColor = 'var(--border-subtle)';
-                      e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
+                      e.currentTarget.style.borderColor = 'var(--border-card)';
+                      e.currentTarget.style.boxShadow = 'var(--shadow-card)';
                       const img = e.currentTarget.querySelector('img');
                       if (img) img.style.transform = 'scale(1)';
                     }}
@@ -346,21 +348,26 @@ export default function HomePage() {
                 >
                   <div
                     style={{
-                      background: 'var(--bg-surface)',
-                      border: '1px solid var(--border-subtle)',
+                      background: 'var(--bg-card)',
+                      border: '1px solid var(--border-card)',
                       borderRadius: 'var(--radius-lg)',
                       overflow: 'hidden',
                       display: 'flex',
                       flexDirection: 'column',
                       height: '100%',
-                      transition: 'border-color 0.2s ease, transform 0.2s ease'
+                      boxShadow: 'var(--shadow-card)',
+                      backdropFilter: 'blur(16px)',
+                      WebkitBackdropFilter: 'blur(16px)',
+                      transition: 'border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = 'var(--accent-rose)';
+                      e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
                       e.currentTarget.style.transform = 'translateY(-3px)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                      e.currentTarget.style.borderColor = 'var(--border-card)';
+                      e.currentTarget.style.boxShadow = 'var(--shadow-card)';
                       e.currentTarget.style.transform = 'translateY(0)';
                     }}
                   >
@@ -428,9 +435,12 @@ export default function HomePage() {
         <section style={{ padding: '24px 0 16px' }}>
           <div className="container">
             <div style={{
-              background: 'var(--bg-surface)',
-              border: '1px solid var(--border-subtle)',
+              background: 'var(--bg-card)',
+              border: '1px solid var(--border-card)',
               borderRadius: 'var(--radius-lg)',
+              boxShadow: 'var(--shadow-card)',
+              backdropFilter: 'blur(16px)',
+              WebkitBackdropFilter: 'blur(16px)',
               padding: '24px',
               display: 'flex',
               justifyContent: 'space-around',

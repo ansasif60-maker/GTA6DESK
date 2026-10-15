@@ -11,20 +11,30 @@
      ========================================================================== */
 
   /* Surface & Background Hierarchy - Deep Obsidian Canvas & Dark Glass */
-  --bg-base: #07090E;
-  --bg-surface: #0E121B;
-  --bg-elevated: #151A26;
-  --bg-overlay: rgba(14, 18, 27, 0.95);
-  --bg-card: rgba(14, 18, 27, 0.85);
-  --bg-card-hover: rgba(22, 28, 42, 0.95);
-  --bg-muted: #161D2C;
-  --bg-header: rgba(7, 9, 14, 0.92);
+  --bg-base: #06080E;
+  --bg-surface: #0E1424;
+  --bg-surface-elevated: #162035;
+  --bg-card: linear-gradient(165deg, rgba(22, 30, 48, 0.94) 0%, rgba(12, 17, 28, 0.98) 100%);
+  --bg-card-hover: linear-gradient(165deg, rgba(30, 42, 68, 0.96) 0%, rgba(16, 23, 38, 0.98) 100%);
+  --bg-elevated: linear-gradient(165deg, rgba(28, 38, 60, 0.94) 0%, rgba(15, 21, 35, 0.98) 100%);
+  --bg-overlay: rgba(10, 14, 24, 0.95);
+  --bg-muted: #141B2D;
+  --bg-header: rgba(8, 11, 18, 0.88);
 
   /* Rockstar Games GTA VI Signature Neon Sunset Gradients & Accents */
   --gradient-vi: linear-gradient(135deg, #FF007A 0%, #FF5A36 50%, #FFA800 100%);
   --gradient-vice: linear-gradient(135deg, #FF007A 0%, #8B5CF6 50%, #00F0FF 100%);
   --gradient-cyan: linear-gradient(135deg, #00F0FF 0%, #0284C7 100%);
   --gradient-hero-overlay: radial-gradient(circle at 50% 0%, rgba(255, 0, 122, 0.15) 0%, rgba(0, 240, 255, 0.05) 50%, transparent 80%);
+
+  /* Rockstar Vice City Atmospheric Twilight Gradient Canvas */
+  --bg-gradient-canvas: 
+    radial-gradient(ellipse 1200px 750px at 78% -4%, rgba(255, 0, 122, 0.18) 0%, rgba(255, 90, 54, 0.08) 35%, transparent 70%),
+    radial-gradient(ellipse 950px 650px at 12% 16%, rgba(0, 240, 255, 0.14) 0%, rgba(14, 165, 233, 0.05) 40%, transparent 70%),
+    radial-gradient(ellipse 1050px 800px at 50% 50%, rgba(139, 92, 246, 0.11) 0%, rgba(255, 0, 122, 0.05) 45%, transparent 75%),
+    radial-gradient(ellipse 1100px 850px at 85% 82%, rgba(255, 168, 0, 0.10) 0%, rgba(255, 0, 122, 0.05) 40%, transparent 75%),
+    radial-gradient(ellipse 850px 650px at 8% 95%, rgba(0, 240, 255, 0.09) 0%, transparent 70%),
+    linear-gradient(180deg, #080A12 0%, #0D111E 20%, #0A0E18 45%, #101424 70%, #06080E 100%);
 
   /* Vice City Neon Brand Accents */
   --accent-rose: #FF007A;
@@ -68,18 +78,21 @@
 
   /* Glassmorphic 1px Borders with Neon Glow Affordances */
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-default: rgba(255, 255, 255, 0.15);
-  --border-card: rgba(255, 255, 255, 0.1);
+  --border-default: rgba(255, 255, 255, 0.16);
+  --border-card: rgba(255, 255, 255, 0.14);
+  --border-card-hover: rgba(0, 240, 255, 0.45);
   --border-cyan: rgba(0, 240, 255, 0.4);
   --border-rose: rgba(255, 0, 122, 0.4);
   --border-amber: rgba(255, 168, 0, 0.4);
 
   /* Elevation Shadows & Neon Glows */
   --shadow-xs: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-  --shadow-sm: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 6px 18px -2px rgba(0, 0, 0, 0.65);
-  --shadow-lg: 0 14px 28px -5px rgba(0, 0, 0, 0.8), 0 0 24px rgba(255, 0, 122, 0.12);
-  --shadow-hover: 0 18px 36px -6px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 0, 122, 0.25);
+  --shadow-sm: 0 2px 6px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-md: 0 6px 18px -2px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --shadow-lg: 0 14px 28px -5px rgba(0, 0, 0, 0.8), 0 0 24px rgba(255, 0, 122, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 16px 36px -4px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  --shadow-card-hover: 0 20px 48px -6px rgba(0, 0, 0, 0.88), 0 0 28px rgba(255, 0, 122, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --shadow-hover: 0 18px 36px -6px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 0, 122, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   --shadow-glow-vi: 0 0 30px rgba(255, 0, 122, 0.25);
   --shadow-glow-cyan: 0 0 30px rgba(0, 240, 255, 0.25);
 
@@ -125,6 +138,10 @@ body {
   min-height: 100vh;
   line-height: 1.65;
   background-color: var(--bg-base);
+  background-image: var(--bg-gradient-canvas);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-primary);
   position: relative;
 }
